@@ -11,8 +11,3 @@ let map = L.map("map", {
 let mrk = L.marker([47.26756, 11.39076]
 ).addTo(map);
 
-
-// let mrk = L.marker([47.26756, 11.39076] {
-//     icon: L.icon({
-//         iconSize: [32, 37],
-//     }).addTo(map);
