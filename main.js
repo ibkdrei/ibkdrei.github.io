@@ -1,8 +1,8 @@
-let startLayer = L.tileLayer.provider("BasemapAT.terrain");
+let startLayer = L.tileLayer.provider("Stamen.TerrainBackground");
 
 let map = L.map("map", {
-    center: [47.25, 11.5],
-    zoom: 9,
+    center: [46.3, 11.504914],
+    zoom: 6.5,
     layers: [
         startLayer
     ]
