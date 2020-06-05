@@ -1,3 +1,5 @@
+/* index.html */
+
 body {
     max-width: 1280px;
     margin: auto;
@@ -6,15 +8,68 @@ body {
 
 
 #map {
+
     width: calc(100% -2px);
     height: 70vh;
     border: 1px solid gray;
+    padding-top: 3em;
 }
 
 header img {
-    width: 400px
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    
 }
 
 header h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+nav ul {
+    margin: 0px;
+    padding: 1em;
+    list-style-type: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
     
+    
+
+}
+
+nav ul li {
+    padding: 3em;
+    margin: 5px;
+    width: 20%;
+    display: inline;
+    padding-bottom: 3em;
+}
+
+main nav ul li img {
+    width: 20px;
+}
+
+
+/* infos.html */
+
+#aachensee {
+
+    width: 100%;
+} 
+
+p {
+    text-align: justify;
+}
+
+/* wege.html */
+
+
+#mapbox {
+    width: calc(100% -2px);
+    height: 70vh;
+    border: 1px solid gray;
 }
