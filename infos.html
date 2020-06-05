@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infos</title>
-
+    <script defer src="infos.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -21,28 +21,23 @@
     </header>
 
     <body>
-        <h3></h3>
-        <p>Warnung: Bergwandern in den Alpen birgt Gefahren. Vor jeder Tour sind aktuelle Informationen einzuholen und
-            es ist immer situativ vor Ort zu entscheiden, ob die aktuelle Gefahrenlage mit den individuellen
-            Vorraussetzungen und Risikopräferenzen übereinstimmt. Zum Ablsovieren einer Wanderung ist eine gewisse
-            Grundkondition ratsam. Je schwieriger die Tour, desto mehr Gefahrenstellen sind vorhanden. Spezifische
-            Gefahren, wie erhöhte Absturzgefahr oder notwenidge Trittsicherheit sind unter Besonderheiten der jeweiligen
-            Touren benannt.</p>
-
-        <p id="toddle">
-            <details>
-                <summary><strong>Höhe</strong></summary>
-                <div>Der niedrigste (links) und der höchste (rechts) Punkt der Tour werden hier gezeigt.</div>
-
-            </details>
-            <details>
-                <summary id="höhe"><strong>Höhenmeter</strong></summary>
-                <div>Die zurückgelegten Höhenmeter bergauf werden durch den Pfeil nach oben (links) ausgedrückt. Der
-                    absteigende (rechts) zeigt an, dass diese Strecke bergab gelaufen werden muss. Die angebene Zahl
-                    bedeutet die zu überwindenden Höhenmeter.</div>
-
-            </details>
-        </p>
+        <button type="button" class="collapsible">Höhe <img src="images/hiking.png" alt=""></button>
+        <div class="content">
+            <p>Der niedrigste (links) und der höchste (rechts) Punkt der Tour werden hier gezeigt.</p>
+        </div>
+        <button type="button" class="collapsible">Höhenmeter <img src="images/hiking.png" alt=""></button>
+        <div class="content">
+            <p>Die zurückgelegten Höhenmeter bergauf werden durch den Pfeil nach oben (links) ausgedrückt. Der
+                absteigende (rechts) zeigt an, dass diese Strecke bergab gelaufen werden muss. Die angebene Zahl
+                bedeutet die zu überwindenden Höhenmeter.
+            </p>
+        </div>
+        <button type="button" class="collapsible">Dauer <img src="images/hiking.png" alt=""></button>
+        <div class="content">
+            <p>Die Zeitangabe gibt an, wie lange ein durchschnittlicher Wanderer für diese Wanderung braucht. Es werden
+                jeweils 300 Höhenmeter begauf, 500 Höhenmeter bergab sowie 4 Kilometer Strecke je Stunde berechnet.
+            </p>
+        </div>
 
     </body>
 
