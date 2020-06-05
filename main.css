@@ -26,13 +26,15 @@ nav ul {
 }
 
 nav ul li {
-    padding: 0px;
+    padding: 3em;
         margin: 5px;
         width: 20%; 
+        display: inline;
+        padding-bottom: 3em;
+        
 }
 
 nav ul li a:link {
-    display: block;
     border: 1px solid #000;
     background-color: #00FFCC;
     padding: 10px;
