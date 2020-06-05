@@ -14,11 +14,17 @@ body {
 }
 
 header img {
-    width: 400px
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    
 }
 
 header h3 {
-    padding-left: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 nav ul {
