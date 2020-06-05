@@ -6,9 +6,11 @@ body {
 
 
 #map {
+   
     width: calc(100% -2px);
     height: 70vh;
     border: 1px solid gray;
+    padding-top: 3em;
 }
 
 header img {
@@ -34,12 +36,6 @@ nav ul li {
         
 }
 
-nav ul li a:link {
-    border: 1px solid #000;
-    background-color: #00FFCC;
-    padding: 10px;
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    font-weight: bold;
+main nav li img {
+    width: 20px;
 }
