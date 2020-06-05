@@ -21,5 +21,9 @@ for (const start of startpoints) {
 L.marker([start.lat, start.lng]).addTo(map);
     startmarker.bindPopup(`Tour ${start.name}`)
 }
+<<<<<<< HEAD
 overlay.startpoints.addTo(map)
 
+=======
+overlay.startpoints.addTo(map)
+>>>>>>> a8b9e8ec5674e119ebc171a46ee7e493a9c7fe8f
