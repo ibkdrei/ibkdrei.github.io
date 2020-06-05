@@ -10,3 +10,36 @@ body {
     height: 70vh;
     border: 1px solid gray;
 }
+
+header img {
+    width: 400px
+}
+
+header h3 {
+    padding-left: 3em;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none 
+}
+
+nav ul li {
+    padding: 3em;
+        margin: 5px;
+        width: 20%; 
+        display: inline;
+        padding-bottom: 3em;
+        
+}
+
+nav ul li a:link {
+    border: 1px solid #000;
+    background-color: #00FFCC;
+    padding: 10px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
