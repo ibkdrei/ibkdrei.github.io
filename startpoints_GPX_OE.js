@@ -3,7 +3,7 @@ const startpoints = [{
         "name": "Bärenkopf",
         "lat": 47.429732,
         "lng": 11.718545,
-        "schwierigkeit": "mittel/schwer"
+        "schwierigkeit": "schwer"
     },
     {
         "id": 2,
@@ -17,7 +17,7 @@ const startpoints = [{
         "name": "Hallstatt",
         "lat": 47.556994,
         "lng": 13.647466,
-        "schwierigkeit": "leicht/mittel"
+        "schwierigkeit": "mittel"
     },
     {
         "id": 4,
@@ -37,14 +37,15 @@ const startpoints = [{
         "id": 6,
         "name": "Seebensee",
         "lat": 47.387982,
-        "lng": 10.937963
+        "lng": 10.937963,
+        "schwierigkeit": "schwer"
     },
     {
         "id": 7,
         "name": "Zell am See",
         "lat": 47.334159,
         "lng": 12.846814,
-        "schwierigkeit": "mittel/schwer"
+        "schwierigkeit": "schwer"
     },
     {
         "id": 8,
