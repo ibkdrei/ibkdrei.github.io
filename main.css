@@ -59,10 +59,29 @@ main nav ul li img {
 #aachensee {
 
     width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 } 
 
 p {
     text-align: justify;
+    width: 91%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    display: block;
+    margin: 0 auto;
+}
+
+#symbole {
+    padding-left: 3em;
+    padding-top: 2em;
+    padding-bottom: 3em;
 }
 
 /* wege.html */
