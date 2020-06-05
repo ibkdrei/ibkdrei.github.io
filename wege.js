@@ -1,13 +1,17 @@
+let overlay = {
+    etappen: L.featureGroup()
+};
+
 let drawEtappe = function(Nummer) {
     overlay.etappen.clearLayers();
-
     
-    let track = ETAPPEN[Nummer][Berg];
+    let track = ETAPPEN[Nummer];
+    console.log(track)
     
     let gpx = new L.GPX(`gpx/MM/Tour${track}.gpx`, {
         async: true,
         marker_options: {
-            startIconUrl: `icons/number_${nr}.png`,
+            startIconUrl: `icons/number_${Nummer}.png`,
             endIconUrl: "icons/finish.png",
             shadowUrl: null,
             iconSize: [32, 37],
@@ -25,12 +29,12 @@ let drawEtappe = function(Nummer) {
     }).addTo(overlay.etappen);
     overlay.etappen.addTo(map);
 
-    for (const key in ETAPPEN[nr]) {
-        let val = ETAPPEN[nr][key];
+    for (const key in ETAPPEN[Nummer]) {
+        let val = ETAPPEN[Nummer][key];
         
         let track = document.querySelector(`#et-${key}`)
         if (key === "track") {
-            track.href = `gpx/MM/Tour${ETAPPEN[nr][key].replace("A","")}.gpx`;
+            track.href = `gpx/MM/Tour${ETAPPEN[Nummer][key]}.gpx`;
         }
         let elem = document.querySelector(`#et-${key}`);
         if (elem) {
@@ -39,7 +43,7 @@ let drawEtappe = function(Nummer) {
         }
     }
 };
-drawEtappe(${Nummer});
+drawEtappe(1);
 
 let pulldown = document.querySelector("#pulldown");
 //console.log(pulldown);
