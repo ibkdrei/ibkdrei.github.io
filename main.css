@@ -56,7 +56,14 @@ main nav ul li img {
 
 /* infos.html */
 
+#aachensee {
 
+    width: 100%;
+} 
+
+p {
+    text-align: justify;
+}
 
 /* wege.html */
 
