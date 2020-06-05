@@ -6,10 +6,19 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css" rel="stylesheet" />
     <title>Etappen</title>
-    <link rel="stylesheet" href="main.css">
+   
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.9.1/leaflet-providers.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.0/gpx.js"></script>
+    
+    <link rel="stylesheet" href="main.css">
     <script src="weginfos.js"></script>
+    <script defer src="wege.js"></script>
+
 
 </head>
 <body>
@@ -35,8 +44,6 @@
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/cguth/ck3zypy3p4rqq1ck0xkyfhwt0',
-            zoom: 13,
-            center: [11.4, 47.5]
         });
     </script>
     <h3>Etappeninformationen</h3>
@@ -45,7 +52,7 @@
         <li>Zielpunkt: <span id=et-ziel></span></li>
         <li>Länge: <span id=et-km></span> km</li>
         <li>Gehzeit: <span id=et-stunden></span> h</li>
-        <li>Schwierigkeitsgrad: <span id=et-grad></span></li>
+        <li>Schwierigkeitsgrad: <span id=et-Schwierigkeit></span></li>
         <li>Höhenmeter Aufstieg: <span id=et-auf></span> hm</li>
         <li>Höhenmeter Abstieg: <span id=et-ab></span> hm</li>
         <li>Höchster Punkt: <span id=et-hp></span> m ü. NN.</li>
