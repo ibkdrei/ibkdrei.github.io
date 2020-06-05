@@ -6,7 +6,7 @@ body {
 
 
 #map {
-   
+
     width: calc(100% -2px);
     height: 70vh;
     border: 1px solid gray;
@@ -23,17 +23,23 @@ header h3 {
 
 nav ul {
     margin: 0px;
-    padding: 0px;
-    list-style-type: none 
+    padding: 1em;
+    list-style-type: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    
+    
+
 }
 
 nav ul li {
     padding: 3em;
-        margin: 5px;
-        width: 20%; 
-        display: inline;
-        padding-bottom: 3em;
-        
+    margin: 5px;
+    width: 20%;
+    display: inline;
+    padding-bottom: 3em;
+
 
 }
 
@@ -46,4 +52,3 @@ main nav ul li img {
     height: 70vh;
     border: 1px solid gray;
 }
-
