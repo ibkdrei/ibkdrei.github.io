@@ -6,9 +6,11 @@ body {
 
 
 #map {
+   
     width: calc(100% -2px);
     height: 70vh;
     border: 1px solid gray;
+    padding-top: 3em;
 }
 
 header img {
