@@ -1,3 +1,5 @@
+/* index.html */
+
 body {
     max-width: 1280px;
     margin: auto;
@@ -53,6 +55,13 @@ nav ul li {
 main nav ul li img {
     width: 20px;
 }
+
+
+/* infos.html */
+
+
+/* wege.html */
+
 
 #mapbox {
     width: calc(100% -2px);
