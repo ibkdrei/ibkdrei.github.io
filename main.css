@@ -26,7 +26,6 @@ header h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: ;
 
 }
 
@@ -48,8 +47,6 @@ nav ul li {
     width: 20%;
     display: inline;
     padding-bottom: 3em;
-
-
 }
 
 main nav ul li img {
@@ -58,6 +55,7 @@ main nav ul li img {
 
 
 /* infos.html */
+
 
 
 /* wege.html */
