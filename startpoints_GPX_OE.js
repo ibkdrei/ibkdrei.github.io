@@ -1,9 +1,9 @@
 const startpoints = [{
         "id": 1,
         "name": "Bärenkopf",
-        "schwierigkeit": "mittel/schwer"
         "lat": 47.429732,
-        "lng": 11.718545
+        "lng": 11.718545,
+        "schwierigkeit": "mittel/schwer"
     },
     {
         "id": 2,
