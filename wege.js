@@ -2,6 +2,14 @@ let overlay = {
     etappen: L.featureGroup()
 };
 
+let map = L.map({
+    center: [47.25, 11.5],
+    zoom: 9,
+    layers: [
+        startLayer
+    ]
+});
+
 let drawEtappe = function(Nummer) {
     overlay.etappen.clearLayers();
     
@@ -50,11 +58,9 @@ let pulldown = document.querySelector("#pulldown");
 
 for (let i = 1; i < ETAPPEN.length; i++) {
     const etappe = ETAPPEN[i];
-    //console.log(etappe);
     pulldown.innerHTML += `<option value="${i}">${etappe.titel}</option>`;
 }
 pulldown.onchange = function(evt) {
     let nr = evt.target.options[evt.target.options.selectedIndex].value;
-    //console.log(nr);
     drawEtappe(Nummer);
 };
