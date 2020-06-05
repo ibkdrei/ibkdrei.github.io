@@ -1,3 +1,5 @@
+/* index.html */
+
 body {
     max-width: 1280px;
     margin: auto;
@@ -45,13 +47,26 @@ nav ul li {
     width: 20%;
     display: inline;
     padding-bottom: 3em;
-
-
 }
 
 main nav ul li img {
     width: 20px;
 }
+
+
+/* infos.html */
+
+#aachensee {
+
+    width: 100%;
+} 
+
+p {
+    text-align: justify;
+}
+
+/* wege.html */
+
 
 #mapbox {
     width: calc(100% -2px);
