@@ -22,6 +22,9 @@ for (const start of startpoints) {
             iconUrl: "images/hiking.png"
         })
     }).addTo(overlay.startpoints);
-    startmarker.bindPopup(`Tour ${start.name} ${start.schwierigkeit}`);
+        startmarker.bindPopup (`
+        <h3>${start.name}</h3>
+        <p>Schwierigkeit: ${start.schwierigkeit}</p>
+        `);
 }
 overlay.startpoints.addTo(map);
