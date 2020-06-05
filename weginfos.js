@@ -1,4 +1,4 @@
-[{
+const ETAPPEN = [{
         "Nummer": 1,
         "Land": "Deutschland",
         "Berg": "Herzogstand",
