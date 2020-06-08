@@ -1,8 +1,6 @@
-let overlay = {
-    etappen: L.featureGroup()
-};
+let startLayer = L.tileLayer.provider("map");
 
-let map = L.map({
+let map = L.map("map", {
     center: [47.25, 11.5],
     zoom: 9,
     layers: [
@@ -10,7 +8,18 @@ let map = L.map({
     ]
 });
 
-let drawEtappe = function(Nummer) {
+let overlay = {
+    etappen: L.featureGroup()
+};
+
+L.control.layers({
+    "map": startLayer,
+    ])
+}, {
+    "Seebensee_Etappen": overlay.etappen
+}).addTo(map);
+
+let drawEtappe = function(Nummer).track {
     overlay.etappen.clearLayers();
     
     let track = ETAPPEN[Nummer];
@@ -51,16 +60,4 @@ let drawEtappe = function(Nummer) {
         }
     }
 };
-drawEtappe(1);
-
-let pulldown = document.querySelector("#pulldown");
-//console.log(pulldown);
-
-for (let i = 1; i < ETAPPEN.length; i++) {
-    const etappe = ETAPPEN[i];
-    pulldown.innerHTML += `<option value="${i}">${etappe.titel}</option>`;
-}
-pulldown.onchange = function(evt) {
-    let nr = evt.target.options[evt.target.options.selectedIndex].value;
-    drawEtappe(Nummer);
-};
+drawEtappe(Nummer);
