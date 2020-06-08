@@ -3,8 +3,7 @@
 body {
 
     margin: auto;
-    @font-face { font-family: 'meine-schrift';
-        src: url('fonts/FontsFree-Net-Akkurat.ttf') format('truetype'); 
+    font-family: "Open Sans", sans-serif;
 }
 
 
@@ -38,8 +37,6 @@ nav ul {
     border-style: solid;
     border-color: black;
     
-    
-
 }
 
 nav ul li {
@@ -51,7 +48,7 @@ nav ul li {
 }
 
 main nav ul li img {
-    width: 20px;
+    width: 10px;
 }
 
 
