@@ -84,7 +84,10 @@ main nav ul li img {
     padding-bottom: 3em;
 }
 
-
+#symbolliste {
+    list-style: none;
+    text-align: justify;
+}
 
 /* wege.html */
 
