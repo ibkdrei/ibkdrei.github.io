@@ -3,7 +3,8 @@
 body {
 
     margin: auto;
-    font-family: "Open Sans", sans-serif;
+    @font-face { font-family: 'meine-schrift';
+        src: url('fonts/FontsFree-Net-Akkurat.ttf') format('truetype'); 
 }
 
 
