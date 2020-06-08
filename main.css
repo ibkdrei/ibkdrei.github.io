@@ -31,6 +31,16 @@ header h3 {
 
 }
 
+
+#laender {
+    list-style-type: none;
+    text-align: center;
+}
+a:link,
+a:visited {
+        color: black;
+    }
+
 /* nav ul {
     margin: 0px;
     padding: 1em;
@@ -53,15 +63,7 @@ header h3 {
     width: 20px; */
 } 
 
-#länder {
-    display: inline;
-    float: left;
-    background: grey;
-    list-style: none;
-    padding: 3em;
-    margin: 5px;
-    width: 20%;
-}
+
 
 /* infos.html */
 
