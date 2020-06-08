@@ -3,7 +3,7 @@
 body {
 
     margin: auto;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Muli', sans-serif; 
 }
 
 
@@ -48,7 +48,7 @@ nav ul li {
 }
 
 main nav ul li img {
-    width: 10px;
+    width: 20px;
 }
 
 
@@ -85,6 +85,7 @@ main nav ul li img {
 #symbolliste {
     list-style: none;
     text-align: justify;
+    width: 100%;
 }
 
 #müll {
