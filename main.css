@@ -31,28 +31,37 @@ header h3 {
 
 }
 
-nav ul {
+/* nav ul {
     margin: 0px;
     padding: 1em;
     list-style-type: none;
     border-width: 1px;
-    border-style: solid;
-    border-color: black;
+    /* border-style: solid;
+    border-color: black; */
     
 }
 
-nav ul li {
+/* nav ul li {
     padding: 3em;
     margin: 5px;
     width: 20%;
+    /* display: inline; */
+    /* padding-bottom: 3em; */ */
+}
+
+/* main nav ul li img {
+    width: 20px; */
+} 
+
+#länder {
     display: inline;
-    padding-bottom: 3em;
+    float: left;
+    background: grey;
+    list-style: none;
+    padding: 3em;
+    margin: 5px;
+    width: 20%;
 }
-
-main nav ul li img {
-    width: 20px;
-}
-
 
 /* infos.html */
 
