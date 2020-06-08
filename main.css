@@ -4,6 +4,8 @@ body {
 
     margin: auto;
     font-family: 'Muli', sans-serif; 
+    max-width: 1280px;
+    padding-right: 2em;
 }
 
 
@@ -56,24 +58,24 @@ main nav ul li img {
 
 #aachensee {
 
-    width: 100%;
+    width: 1280px;
     height: auto;
     display: block;
     margin: 0 auto;
 } 
 
 #warnung {
-    text-align: justify;
-    width: 91%;
+    /* text-align: justify; */
+    width: 1280px;
     border-width: 1px;
     border-style: solid;
-    border-color: black;
+    border-color: red;
     padding-left: 1em;
     padding-top: 1em;
     padding-right: 1em;
     padding-bottom: 1em;
-    display: block;
-    margin: 0 auto;
+    /* display: block; */
+   
 }
 
 #symbole {
@@ -89,7 +91,7 @@ main nav ul li img {
 }
 
 #müll {
-    width: 350px;
+    width: 400px;
     float: left;
     padding-right: 2em;
 
