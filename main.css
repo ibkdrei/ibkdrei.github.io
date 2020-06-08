@@ -6,6 +6,7 @@ body {
     font-family: 'Muli', sans-serif; 
     max-width: 1280px;
     padding-right: 2em;
+    text-align: justify;
 }
 
 
@@ -31,27 +32,44 @@ header h3 {
 
 }
 
-nav ul {
+
+#laender {
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+    display: inline;
+    padding-bottom: 2em;
+    padding: 3em;
+    margin: 5px;
+    width: 20%;
+    
+    padding-bottom: 3em;
+}
+a:link,
+a:visited {
+        color: black;
+    }
+
+/* nav ul {
     margin: 0px;
     padding: 1em;
     list-style-type: none;
     border-width: 1px;
-    border-style: solid;
-    border-color: black;
+    /* border-style: solid;
+    border-color: black; */
     
-}
 
-nav ul li {
+
+/* nav ul li {
     padding: 3em;
     margin: 5px;
     width: 20%;
-    display: inline;
-    padding-bottom: 3em;
-}
+    /* display: inline; */
+    /* padding-bottom: 3em; */
 
-main nav ul li img {
-    width: 20px;
-}
+
+/* main nav ul li img {
+    width: 20px; */
 
 
 /* infos.html */
@@ -64,19 +82,7 @@ main nav ul li img {
     margin: 0 auto;
 } 
 
-#warnung {
-/*    
-    width: 1280px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: red;
-    padding-left: 1em;
-    padding-top: 1em;
-    padding-right: 1em;
-    padding-bottom: 1em;
-    display: block; */
-   
-}
+
 
 figcaption {
     padding: .8em;
