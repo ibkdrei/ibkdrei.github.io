@@ -1,6 +1,8 @@
-let startLayer = L.tileLayer.provider("map");
+let startLayer = L.mapbox.tileLayer("mapbox");
 
-let map = L.map("map", {
+Nummer = 6
+
+let map = L.mapbox.tilelayer("mapbox", {
     center: [47.25, 11.5],
     zoom: 9,
     layers: [
@@ -13,13 +15,12 @@ let overlay = {
 };
 
 L.control.layers({
-    "map": startLayer,
-    ])
+    "mapbox": startLayer,
 }, {
     "Seebensee_Etappen": overlay.etappen
 }).addTo(map);
 
-let drawEtappe = function(Nummer).track {
+let drawEtappe = function(Nummer) {
     overlay.etappen.clearLayers();
     
     let track = ETAPPEN[Nummer];
