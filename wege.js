@@ -1,13 +1,9 @@
-let startLayer = L.mapbox.tileLayer("mapbox");
-
-Nummer = 6
-
-let map = L.mapbox.tilelayer("mapbox", {
-    center: [47.25, 11.5],
-    zoom: 9,
-    layers: [
-        startLayer
-    ]
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2d1dGgiLCJhIjoiY2syZGVpbzFkMDJpeDNibGtuNnhucDJnMiJ9.YbgYZkJ7Wcb_6wp6GvupHA';
+var mapbox = new mapboxgl.Map({
+    container: 'mapbox',
+    style: 'mapbox://styles/cguth/ck3zypy3p4rqq1ck0xkyfhwt0',
+    center: [ 11.5, 47.25],
+    zoom: 12
 });
 
 let overlay = {
@@ -15,10 +11,9 @@ let overlay = {
 };
 
 L.control.layers({
-    "mapbox": startLayer,
-}, {
-    "Seebensee_Etappen": overlay.etappen
-}).addTo(map);
+    "Etappen": overlay.etappen
+}).addTo(mapbox);
+
 
 let drawEtappe = function(Nummer) {
     overlay.etappen.clearLayers();
@@ -40,12 +35,12 @@ let drawEtappe = function(Nummer) {
             color: "black",
             dashArray: [2, 5]
         }
-    });
+    }).addTo(mapbox),
     
     gpx.on("loaded", function(evt) {
-        map.fitBounds(evt.target.getBounds());
+        mapbox.fitBounds(evt.target.getBounds());
     }).addTo(overlay.etappen);
-    overlay.etappen.addTo(map);
+    overlay.etappen.addTo(mapbox);
 
     for (const key in ETAPPEN[Nummer]) {
         let val = ETAPPEN[Nummer][key];
@@ -61,4 +56,4 @@ let drawEtappe = function(Nummer) {
         }
     }
 };
-drawEtappe(Nummer);
+drawEtappe(1);
