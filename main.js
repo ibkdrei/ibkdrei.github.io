@@ -1,13 +1,13 @@
-let startLayer = L.tileLayer.provider("Stamen.TerrainBackground");
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2d1dGgiLCJhIjoiY2syZGVpbzFkMDJpeDNibGtuNnhucDJnMiJ9.YbgYZkJ7Wcb_6wp6GvupHA';
 
-let map = L.map("map", {
-    center: [46.3, 11.504914],
-    zoom: 6.5,
-    layers: [
-        startLayer
-    ]
-});
-
+var mapbox = new mapboxgl.Map({
+    container: 'mapbox',
+    style: 'mapbox://styles/cguth/ck3zypy3p4rqq1ck0xkyfhwt0',
+    center: [46.3, 11.5]
+    maxBounds: [[-180, -85], [180,85]]
+    zoom: 6.5
+    });
+})
 
 let overlay = {
     startpoints: L.featureGroup()

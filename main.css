@@ -111,10 +111,8 @@ figcaption {
 } 
 
 
-
-/* wege.html */
 #mapbox {
-    wwidth: calc(100% -2px);
+    width: calc(100% -2px);
     height: 70vh;
     border: 1px solid gray;
     padding-top: 3em;

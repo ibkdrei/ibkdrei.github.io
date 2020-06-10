@@ -16,7 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.0/gpx.js"></script>
     
     <link rel="stylesheet" href="main.css">
-    <script src="weginfos.js"></script>
+    <script defer src="weginfos.js"></script>
     <script defer src="wege.js"></script>
 
 
@@ -38,13 +38,7 @@
             </ul>
         </nav>
     <div id="mapbox"></div>
-    <script>
-	    mapboxgl.accessToken = 'pk.eyJ1IjoiY2d1dGgiLCJhIjoiY2syZGVpbzFkMDJpeDNibGtuNnhucDJnMiJ9.YbgYZkJ7Wcb_6wp6GvupHA';
-        var mapbox = new mapboxgl.Map({
-            container: 'mapbox',
-            style: 'mapbox://styles/cguth/ck3zypy3p4rqq1ck0xkyfhwt0',
-        });
-    </script>
+ 
     <h3>Etappeninformationen Seebensee</h3>
     <ul id="uebersicht">
         <li>Startpunkt: <span id=et-start></span></li>
