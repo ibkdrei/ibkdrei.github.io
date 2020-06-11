@@ -1,4 +1,4 @@
-var Herzogstand =
+let herzogstand =
  {
     "type": "FeatureCollection",
     "name": "track_points",
@@ -9551,5 +9551,4 @@ var Herzogstand =
             }
         }
     ]
-}
 }
