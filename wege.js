@@ -1,13 +1,94 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoiY2d1dGgiLCJhIjoiY2syZGVpbzFkMDJpeDNibGtuNnhucDJnMiJ9.YbgYZkJ7Wcb_6wp6GvupHA';
-let map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/cguth/ck3zypy3p4rqq1ck0xkyfhwt0',
-    center: [11.5, 47.25],
-    zoom: 10
+// mapboxgl.accessToken = 'pk.eyJ1IjoiY2d1dGgiLCJhIjoiY2syZGVpbzFkMDJpeDNibGtuNnhucDJnMiJ9.YbgYZkJ7Wcb_6wp6GvupHA';
+// let map = new mapboxgl.Map({
+//     container: 'map',
+//     style: 'mapbox://styles/cguth/ck3zypy3p4rqq1ck0xkyfhwt0',
+//     center: [11.5, 47.25],
+//     zoom: 10
+// });
+
+// let seiten = document.querySelector("#mapAchensee");
+
+let startLayer = L.tileLayer.provider("Esri.WorldStreetMap");
+
+let map = L.map("map", {
+    center: [47.25, 11.5],
+    zoom: 9,
+    layers: [
+        startLayer
+    ]
 });
 
+// let mapWege = L.map("mapWege", {
+//     center: [47.25, 11.5],
+//     zoom: 9,
+//     layers: [
+//         startLayer
+//     ]
+// });
 
-L.geoJSON(herzogstand).addTo(map);
+// let mapAchensee = L.map("mapAchensee", {
+//     center: [47.25, 11.5],
+//     zoom: 9,
+//     layers: [
+//         startLayer
+//     ]
+// });
+
+// let mapHallstatt = L.map("mapHallstatt", {
+//     center: [47.25, 11.5],
+//     zoom: 9,
+//     layers: [
+//         startLayer
+//     ]
+// });
+
+
+
+// console.log(herzogstand);
+
+let getLine = function (daten) {
+    let datenPunkte = [];
+
+    L.geoJSON(daten, {
+        // style: {color: "red"}
+        pointToLayer: function (feature) {
+            let lat = feature.geometry.coordinates[1];
+            let lng = feature.geometry.coordinates[0];
+
+            let coord = [lat, lng]
+
+            datenPunkte.push(coord);
+        }
+
+    }).addTo(map);
+
+    console.log(datenPunkte);
+
+}
+
+getLine(herzogstand)
+
+// let drawRoute = function (daten, mapID) {
+//     L.geoJSON(daten, {
+//         // style: {color: "red"}
+//         let datenPunkte = [];
+//         pointToLayer: function (feature) {
+//             let lat = feature.geometry.coordinates[1];
+//             let lng = feature.geometry.coordinates[0];
+//             console.log(lat, lng);
+
+//             let marker = L.marker([lat, lng]);
+//             datenPunkte.push(marker)
+//             return marker;
+//         }
+//     }).addTo(mapID);
+// }
+
+// drawRoute(herzogstand, mapWege)
+// drawRoute(datenAchensee, mapAchensee);
+// drawRoute(datenHallstatt, mapHallstadt)
+
+
 
 // map.data.loadGeoJson('track_points.js');
 
