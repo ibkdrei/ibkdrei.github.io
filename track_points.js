@@ -1,5 +1,4 @@
-let herzogstand =
- {
+var herzogstand = [{
     "type": "FeatureCollection",
     "name": "track_points",
     "crs": {
