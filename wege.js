@@ -18,6 +18,8 @@ let map = L.map("map", {
     ]
 });
 
+
+
 // let mapWege = L.map("mapWege", {
 //     center: [47.25, 11.5],
 //     zoom: 9,
@@ -42,43 +44,51 @@ let map = L.map("map", {
 //     ]
 // });
 
+var myStyle = {
+    "color": "#ff7800",
+    "weight": 5,
+    "opacity": 0.65
+};
 
+L.geoJSON(myLines, {
+    style: myStyle
+}).addTo(map);
 
-// console.log(herzogstand);
+// // console.log(herzogstand);
 
-let getLine = function (daten) {
-    let datenPunkte = [];
+// let getLine = function (daten) {
+//     let datenPunkte = [];
 
-    L.geoJSON(daten, {
-        // style: {color: "red"}
-        pointToLayer: function (feature) {
-            let lat = feature.geometry.coordinates[1];
-            let lng = feature.geometry.coordinates[0];
-
-            let coord = [lat, lng]
-
-            datenPunkte.push(coord);
-        }
-
-    }).addTo(map);
-
-    console.log(datenPunkte);
-
-}
-
-getLine(herzogstand)
-
-// let drawRoute = function (daten, mapID) {
 //     L.geoJSON(daten, {
 //         // style: {color: "red"}
-//         let datenPunkte = [];
 //         pointToLayer: function (feature) {
 //             let lat = feature.geometry.coordinates[1];
 //             let lng = feature.geometry.coordinates[0];
-//             console.log(lat, lng);
 
-//             let marker = L.marker([lat, lng]);
-//             datenPunkte.push(marker)
+//             let coord = [lat, lng]
+
+//             datenPunkte.push(coord);
+//         }
+
+//     }).addTo(map);
+
+//     console.log(datenPunkte);
+
+// }
+
+// getLine(herzogstand)
+
+// // let drawRoute = function (daten, mapID) {
+// //     L.geoJSON(daten, {
+// //         // style: {color: "red"}
+// //         let datenPunkte = [];
+// //         pointToLayer: function (feature) {
+// //             let lat = feature.geometry.coordinates[1];
+// //             let lng = feature.geometry.coordinates[0];
+// //             console.log(lat, lng);
+
+// //             let marker = L.marker([lat, lng]);
+// //             datenPunkte.push(marker)
 //             return marker;
 //         }
 //     }).addTo(mapID);
