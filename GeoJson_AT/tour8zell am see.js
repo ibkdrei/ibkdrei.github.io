@@ -5,7 +5,7 @@ var myLines = [{
 
             "type": "Feature",
             "properties": {
-                "name": "Fototour Herzogstand by Mountain Moments"
+                "name": "Fototour Zell am See by Mountain Moments"
             }
 
             ,
