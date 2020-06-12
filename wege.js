@@ -36,7 +36,7 @@ for (const start of startpoints) {
         startmarker.bindPopup (`
         <h3>${start.name}</h3>
         <p>Schwierigkeit: ${start.schwierigkeit}</p>
-        <p><a target="links" href="Hallstatt.html">zur Tour</a></p>
+        // <p><a target="links" href="Hallstatt.html">zur Tour</a></p>
         `);
 }
 overlay.startpoints.addTo(map);
