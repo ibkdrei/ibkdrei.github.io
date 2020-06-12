@@ -8,7 +8,8 @@
 
 // let seiten = document.querySelector("#mapAchensee");
 
-let startLayer = L.tileLayer.provider("Esri.WorldStreetMap");
+let startLayer = L.tileLayer.provider("HikeBike.HikeBike")
+// let startLayer = L.tileLayer.provider("Jawg.Terrain")
 
 let map = L.map("map", {
     center: [47.25, 11.5],
@@ -17,7 +18,6 @@ let map = L.map("map", {
         startLayer
     ]
 });
-
 
 
 // let mapWege = L.map("mapWege", {
@@ -53,6 +53,18 @@ var myStyle = {
 L.geoJSON(myLines, {
     style: myStyle
 }).addTo(map);
+
+map.data.loadGeoJson('track_points.js');
+
+// map.on('load', function () {
+//     map.addSource('route', {
+//         'type': 'geojson',
+//         'data': {
+//             'type': 'Feature',
+//             'properties': {},
+//             'geometry': {
+//                 'type': 'LineString',
+//                 'coordinates':
 
 // // console.log(herzogstand);
 
