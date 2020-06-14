@@ -20,6 +20,28 @@ let map = L.map("map", {
 });
 
 
+let overlay = {
+    startpoints: L.featureGroup()
+};
+
+for (const start of startpoints) {
+    let startmarker = L.marker([start.lat, start.lng], {
+        icon: L.icon({
+            iconSize: [32, 37],
+            iconAnchor: [16, 37],
+            popupAnchor: [0, -37],
+            iconUrl: "images/hiking.png"
+        })
+    }).addTo(overlay.startpoints);
+        startmarker.bindPopup (`
+        <h3>${start.name}</h3>
+        <p>Schwierigkeit: ${start.schwierigkeit}</p>
+        // <p><a target="links" href="${start.tourhtml}">zur Tour</a></p>
+        `);
+}
+overlay.startpoints.addTo(map);
+
+
 // let mapWege = L.map("mapWege", {
 //     center: [47.25, 11.5],
 //     zoom: 9,
@@ -54,7 +76,17 @@ L.geoJSON(myLines, {
     style: myStyle
 }).addTo(map);
 
-map.data.loadGeoJson('track_points.js');
+// map.data.loadGeoJson('track_points.js');
+
+for (const key in ETAPPEN[nr]) {
+    if (ETAPPEN[nr].hasOwnProperty(key)) {
+        const val = ETAPPEN[nr][key];
+        let elem = document.querySelector(`#et-${key}`);
+        if (elem) {
+            elem.innerHTML = val;
+        }
+    }
+}
 
 // map.on('load', function () {
 //     map.addSource('route', {
