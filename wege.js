@@ -41,6 +41,10 @@ for (const start of startpoints) {
 }
 overlay.startpoints.addTo(map);
 
+L.control.scale({
+    imperial: false
+}).addTo(map);
+
 
 // let mapWege = L.map("mapWege", {
 //     center: [47.25, 11.5],
