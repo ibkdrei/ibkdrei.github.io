@@ -76,7 +76,7 @@ L.geoJSON(myLines, {
     style: myStyle
 }).addTo(map);
 
-map.data.loadGeoJson('track_points.js');
+// map.data.loadGeoJson('track_points.js');
 
 for (const key in ETAPPEN[nr]) {
     if (ETAPPEN[nr].hasOwnProperty(key)) {
