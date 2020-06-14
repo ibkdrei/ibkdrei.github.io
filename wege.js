@@ -50,6 +50,16 @@ L.control.scale({
 }).addTo(map);
 
 
+
+for (const key in ETAPPEN[Nummer]) {
+    console.log("schau mal", key);
+    let val = ETAPPEN[Nummer][key];
+    console.log("schau mal 2:", key, val)
+    console.log(`et-${key}`);
+    let elem = document.querySelector(`#et-${key}`);
+    console.log("elem:", elem)
+    };
+
 // let mapWege = L.map("mapWege", {
 //     center: [47.25, 11.5],
 //     zoom: 9,
