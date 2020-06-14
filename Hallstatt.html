@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.9.1/leaflet-providers.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.0/gpx.js"></script>
-    <script src="GeoJson_AT/tour10hallstatt.js"<></script>
+    <script src="GeoJson_AT/tour10hallstatt.js"></script>
 
 
     <link rel="stylesheet" href="main.css">
@@ -23,33 +23,56 @@
 
 
 </head>
+
 <body>
     <header>
-        <h2><img src="images/MM Logo.png" title="MM_header" alt="Mountain Moments"></h2>
+        <h2> <a href="https://mountainmoments.de"><img src="images/MM Logo.png"></a></h2>
         <h3>Die schönsten Fotospots und Wanderungen in den Alpen</h3>
+
     </header>
 
-    <h3>Etappen</h3>
     <main>
-        
-        <nav>
-            <ul>
-                <li> <a href="https://mountainmoments.de"> <img src="images/startseite.png" alt=""> Homepage der Mountain Moments </a></li>
-                <li> <a href="infos.html"> <img src="images/info.png"> weiteren Infos zu den Wanderungen </a></li>
-                <li> <a href="wege.html"> <img src="images/wald.png" alt=""> Wanderwege </a></li>
-            </ul>
-        </nav>
-    <select id="pulldown"></select>
-    <div id="map"></div>
-    <script>
-	    mapboxgl.accessToken = 'pk.eyJ1IjoiY2d1dGgiLCJhIjoiY2syZGVpbzFkMDJpeDNibGtuNnhucDJnMiJ9.YbgYZkJ7Wcb_6wp6GvupHA';
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/cguth/ck3zypy3p4rqq1ck0xkyfhwt0',
-        });
-    </script>
-    <h3>Etappeninformationen</h3>
-    <ul id="uebersicht">
+
+        <ul id="navigation">
+            <li><a href="#">Home</a></li>
+            <li class="sub">
+                <a href="#">Wanderregionen</a>
+                <ul id="laender">
+                    <li><a href="wege.html"> <i class="fas fa-mountain"></i>Österreich</a></li>
+                    <li><a href="zukunft.html"><i class="fas fa-mountain"></i>Deutschland</a></li>
+                    <li><a href="zukunft.html"><i class="fas fa-mountain"></i>Italien</a></li>
+                    <li><a href="zukunft.html"><i class="fas fa-mountain"></i>Frankreich</a></li>
+                    <li><a href="zukunft.html"><i class="fas fa-mountain"></i>Slowenien</a></li>
+                </ul>
+
+            </li>
+
+            <li>
+                <a href="infos.html">Infos</a>
+            </li>
+            <li>
+                <a href="#">Contacts</a>
+            </li>
+
+        </ul>
+        </ul>
+
+
+        <p>Text über Mountain Moments und die Wanderungen bla bla müssen wir uns noch was ausdenken
+
+            Wir haben für euch die schönsten Routen in den Alpen herausgesucht. Zuerst suche dir das Land aus, in dem du
+            Wandern willst. Wenn du auf die kleine Wolke links unten auf der Karte klickst, kannst du dir auch die
+            aktuelle Regensituation anschauen.
+        </p>
+
+
+
+
+        <p> Bei einer Wanderung in alpinem Gelände sind viele Dinge zu beachten. <a href="infos.html"> <b>Hier</b></a>
+            findest du mehr Informationen zu unseren Karten und zur allgemeinen Sicherheit in alpinen Gelände. </p>
+        <div id="map"></div>
+        <h3>Etappeninformationen</h3>
+        <ul id="uebersicht">
         <li>Startpunkt: <span id=et-start></span></li>
         <li>Zielpunkt: <span id=et-ziel></span></li>
         <li>Länge: <span id=et-km></span> km</li>
@@ -62,7 +85,14 @@
     </ul>
     <h3>Wegverlauf</h3>
     <p id="et-info"></p>
-    <h4>Download des Etappentracks: <a id="et-track" href="gpx/AdlerwegEtappe01.gpx"></a></h3
+    <h4>Download des Etappentracks: <a id="et-track" href="gpx/AdlerwegEtappe01.gpx"></a></h4
+
+
     </main>
 </body>
+<footer>
+    <nav style="text-align: center; color: grey; padding-bottom: 2em; padding-top: 2em;">
+        &copy; Mountain Moments 2020
+    </nav>
+</footer>
 </html>
