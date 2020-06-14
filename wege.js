@@ -8,11 +8,18 @@
 
 // let seiten = document.querySelector("#mapAchensee");
 
+// const hallstatt = document.getElementById("imagebox").src="fotospots/Hallstatt"+total+".jpg"
+
 const div = document.getElementById("map");
 const breite = div.getAttribute("center-lat");
 const laenge = div.getAttribute("center-lng");
 const photo_lat = div.getAttribute("photo_lat");
 const photo_lng = div.getAttribute("photo_lng");
+const spot = div.getAttribute("fotospot src");
+const img = document.getElementById("myfoto");
+
+
+
 
 let startLayer = L.tileLayer.provider("HikeBike.HikeBike")
 // let startLayer = L.tileLayer.provider("Jawg.Terrain")
@@ -51,9 +58,16 @@ L.control.scale({
     imperial: false
 }).addTo(map);
 
-var image = '<img src="fotospots/Hallstatt.jpg" width="150px"/>'
 
-let foto = L.marker([photo_lat, photo_lng], {
+// var img = document.querySelectorAll('#fotospots img').src
+
+
+
+
+
+
+
+let fotospot = L.marker([photo_lat, photo_lng], {
             icon: L.icon({
                 iconSize: [32, 37],
                 iconAnchor: [16, 37],
@@ -61,9 +75,12 @@ let foto = L.marker([photo_lat, photo_lng], {
                 iconUrl: "icons/photo.png"
             })
             }).addTo(map);
-            foto.bindPopup(
-            image
+            fotospot.bindPopup(
+            img 
             );
+
+        
+            
 
 
 
