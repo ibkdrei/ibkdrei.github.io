@@ -78,6 +78,16 @@ L.geoJSON(myLines, {
 
 map.data.loadGeoJson('track_points.js');
 
+for (const key in ETAPPEN[nr]) {
+    if (ETAPPEN[nr].hasOwnProperty(key)) {
+        const val = ETAPPEN[nr][key];
+        let elem = document.querySelector(`#et-${key}`);
+        if (elem) {
+            elem.innerHTML = val;
+        }
+    }
+}
+
 // map.on('load', function () {
 //     map.addSource('route', {
 //         'type': 'geojson',
