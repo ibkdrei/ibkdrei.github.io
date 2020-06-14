@@ -8,12 +8,16 @@
 
 // let seiten = document.querySelector("#mapAchensee");
 
+const div = document.getElementById("map");
+const breite = div.getAttribute("center-lat");
+const laenge = div.getAttribute("center-lng");
+
 let startLayer = L.tileLayer.provider("HikeBike.HikeBike")
 // let startLayer = L.tileLayer.provider("Jawg.Terrain")
 
 let map = L.map("map", {
-    center: [47.25, 11.5],
-    zoom: 9,
+    center: [breite, laenge],
+    zoom: 12,
     layers: [
         startLayer
     ]
