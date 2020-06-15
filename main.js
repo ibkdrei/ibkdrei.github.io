@@ -50,15 +50,19 @@ function resetHighlight(e) {
 
 console.log(BOUNDARIES)
 
+// function onClick(e) {
+//     for (const key1 in BOUNDARIES[properties.admin]) {
+//         if (key1 == Austria) {
+//             window.open("https://ibkdrei.github.io/wege.html");
+//         } else {
+//             window.open("https.//ibkdrei.github.zukunft.html");
+//         }
+//     }
+// };
+
 function onClick(e) {
-    for (const key1 in BOUNDARIES[properties.admin]) {
-        if (key1 == Austria) {
-            window.open("https://ibkdrei.github.io/wege.html");
-        } else {
-            window.open("https.//ibkdrei.github.zukunft.html");
-        }
-    }
-};
+    window.open("https://ibkdrei.github.io/wege.html");
+}
 
 function onEachFeature(feature, layer) {
     layer.on({
