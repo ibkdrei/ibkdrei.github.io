@@ -17,16 +17,15 @@ const photo_lat = div.getAttribute("photo_lat");
 const photo_lng = div.getAttribute("photo_lng");
 const spot = div.getAttribute("fotospot src");
 const img = document.getElementById("myfoto");
+const naehe = div.getAttribute("zoom");
 
 
-
-
-let startLayer = L.tileLayer.provider("HikeBike.HikeBike")
+let startLayer = L.tileLayer.provider("Esri.WorldTopoMap")
 // let startLayer = L.tileLayer.provider("Jawg.Terrain")
 
 let map = L.map("map", {
     center: [breite, laenge],
-    zoom: 14,
+    zoom: naehe,
     layers: [
         startLayer
     ]
@@ -71,14 +70,12 @@ let showInfos = function (Nummer) {
             }
 
         }
-    // console.log("elem:", elem)
+        // console.log("elem:", elem)
 
 
-};
-showInfos(Nummer);
+    };
+    showInfos(Nummer);
 }
-
-
 
 
 var myStyle = {
@@ -939,16 +936,13 @@ map.locate({
 
 
 let fotospot = L.marker([photo_lat, photo_lng], {
-            icon: L.icon({
-                iconSize: [32, 37],
-                iconAnchor: [16, 37],
-                popupAnchor: [0, -37],
-                iconUrl: "icons/photo.png"
-            })
-            }).addTo(map);
-            fotospot.bindPopup(
-            img 
-            );
-
-        
-        
+    icon: L.icon({
+        iconSize: [32, 37],
+        iconAnchor: [16, 37],
+        popupAnchor: [0, -37],
+        iconUrl: "icons/photo.png"
+    })
+}).addTo(map);
+fotospot.bindPopup(
+    img
+);
