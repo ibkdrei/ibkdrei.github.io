@@ -944,5 +944,8 @@ let fotospot = L.marker([photo_lat, photo_lng], {
     })
 }).addTo(map);
 fotospot.bindPopup(
-    img
+    img, {
+        maxWidth: "auto"
+    }
 );
+

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css" rel="stylesheet" />
     <title>Etappen</title>
-   
+
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
@@ -15,21 +16,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.9.1/leaflet-providers.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.0/gpx.js"></script>
- 
-    
+
+
     <!-- GPS-Standort Plugin von CliffCloud -->
-<   <script src="Leaflet.LocationShare.js"></script>
+    < <script src="Leaflet.LocationShare.js">
+        </script>
 
-    <link rel="stylesheet" href="main.css">
-    <script src="GeoJson_AT/tour7olpererhütte.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <script src="GeoJson_AT/tour7olpererhütte.js"></script>
 
-    <script src="weginfos.js"></script>
-    <script defer src="wege.js"></script>
-    <script src="startpoints_GPX_OE.js"></script>
+        <script src="weginfos.js"></script>
+        <script defer src="wege.js"></script>
+        <script src="startpoints_GPX_OE.js"></script>
 
 
 
 </head>
+
 <body>
     <header>
         <h2> <a href="index.html"><img src="images/MM Logo.png"></a></h2>
@@ -61,25 +64,39 @@
         </ul>
         <p> Bei einer Wanderung in alpinem Gelände sind viele Dinge zu beachten. <a href="infos.html"> <b>Hier</b></a>
             findest du mehr Informationen zu unseren Karten und zur allgemeinen Sicherheit in alpinen Gelände. </p>
-            <div id="map"  center-lat= "47.038532" center-lng="11.701643" photo_lat="47.043079" photo_lng="11.6890102" zoom="14">
-                <img src="fotospots/Olperer.jpg" id="myfoto" width="100px" /></div>
-            
+            <p>Wenn du auf das Fotosymbol klickst, siehst du ein Foto von unserem Lieblingsfotospot der Route.</p>
+        <div id="map" center-lat="47.038532" center-lng="11.701643" photo_lat="47.043079" photo_lng="11.6890102"
+            zoom="14">
+            <img src="fotospots/Olperer.jpg" id="myfoto" width="100px" /></div>
 
-        <h3>Etappeninformationen</h3>
+
+        <h3>Tourinformationen</h3>
         <ul id="uebersicht">
-        <li>Startpunkt: <span id=et-start></span></li>
-        <li>Zielpunkt: <span id=et-ziel></span></li>
-        <li>Länge: <span id=et-km></span> km</li>
-        <li>Gehzeit: <span id=et-stunden></span> h</li>
-        <li>Schwierigkeitsgrad: <span id=et-Schwierigkeit></span></li>
-        <li>Höhenmeter Aufstieg: <span id=et-auf></span> hm</li>
-        <li>Höhenmeter Abstieg: <span id=et-ab></span> hm</li>
-        <li>Höchster Punkt: <span id=et-hp></span> m ü. NN.</li>
-        <li>Einkehrmöglichkeiten: <span id=et-einkehr></span></li>
-    </ul>
-    <h3>Wegverlauf</h3>
-    <p id="et-info"></p>
-    <h4>Download des Etappentracks: <a id="et-track" href="gpx/AdlerwegEtappe01.gpx"></a></h4
+            <li><img src="icons/play-circle-solid.svg" width="30px"
+                    style="vertical-align: middle; padding: 0.5em;">Startpunkt: <span id=et-start></span></li>
+            <li><img src="icons/stop-circle-solid.svg" width="30px"
+                    style="vertical-align: middle; padding: 0.5em;">Zielpunkt: <span id=et-ziel></span></li>
+            <li><img src="icons/sort-amount-up-alt-solid.svg" width="30px"
+                    style="vertical-align: middle; padding: 0.5em;">Schwierigkeitsgrad: <span
+                    id=et-Schwierigkeit></span></li>
+            <li><img src="icons/entfernung.png" width="50px" style=" vertical-align: middle">Länge: <span
+                    id=et-km></span> km</li>
+            <li><img src="icons/dauer.png" width="50px" style=" vertical-align: middle">Gehzeit: <span
+                    id=et-stunden></span> h</li>
+
+            <li><img src="icons/hoch.png" width="50px" style=" vertical-align: middle">Höhenmeter Aufstieg: <span
+                    id=et-auf></span> hm</li>
+            <li><img src="icons/hoch.png" width="50px" style=" vertical-align: middle">Höhenmeter Abstieg: <span
+                    id=et-ab></span> hm</li>
+            <li><img src="icons/hoehe1.png" width="50px" height="50px" style=" vertical-align: middle">Höchster Punkt:
+                <span id=et-hp></span> m ü. NN.</li>
+
+        </ul>
+        <h3>Wegverlauf</h3>
+        <p id="et-info"></p>
+        <h4><img src="icons/cloud-download-alt-solid.svg" width="30px"
+                style="vertical-align: middle; padding: 0.5em;">Download des Etappentracks: <a id="et-track"
+                href="gpx/AdlerwegEtappe01.gpx"></a></h4>
 
 
     </main>
@@ -89,4 +106,5 @@
         &copy; Mountain Moments 2020
     </nav>
 </footer>
+
 </html>
