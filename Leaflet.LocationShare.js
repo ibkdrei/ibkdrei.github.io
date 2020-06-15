@@ -93,6 +93,7 @@ function getJsonFromUrl () {
 
 
 function copyPrompt() {
+  if (typeof LS.Send.Message === 'undefined') LS.Send.Message = 'Default';
   window.prompt("Send this location with: Ctrl+C, Enter", '' + 
                 location.origin + location.pathname + '?' + 
                 'lat' + '=' + LS.Send.lat + '&' +
