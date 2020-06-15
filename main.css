@@ -1,5 +1,13 @@
 /* index.html */
 
+header {
+    font-family: 'Muli', sans-serif;
+}
+
+footer {
+    font-family: 'Muli', sans-serif;
+}
+
 body {
 
     margin: auto;
