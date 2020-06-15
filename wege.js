@@ -63,27 +63,61 @@ let Nummera = xyc.dataset.xyz
 console.log(ETAPPEN[Nummera].Berg)
 
 
-Nummerau = ETAPPEN[Nummera].Nummer
-Land =ETAPPEN[Nummera].Land
-Berg = ETAPPEN[Nummera].Berg
-Beschreibung = ETAPPEN[Nummera].Beschreibung
-Schwierigkeit =  ETAPPEN[Nummera].Schwierigkeit
-Dauer = ETAPPEN[Nummera].Dauer
-Laenge = ETAPPEN[Nummera].KM
-Aufstieg= ETAPPEN[Nummera].Aufstieg
-Abstieg = ETAPPEN[Nummera].Abstieg
+// Nummerau = ETAPPEN[Nummera].Nummer
+// Land =ETAPPEN[Nummera].Land
+// Berg = ETAPPEN[Nummera].Berg
+// Beschreibung = ETAPPEN[Nummera].Beschreibung
+// Schwierigkeit =  ETAPPEN[Nummera].Schwierigkeit
+// Dauer = ETAPPEN[Nummera].Dauer
+// Laenge = ETAPPEN[Nummera].KM
+// Aufstieg= ETAPPEN[Nummera].Aufstieg
+// Abstieg = ETAPPEN[Nummera].Abstieg
+
+    
+
+let val = ETAPPEN[Nummera].key;
+
+for (const key in ETAPPEN[Nummera]) {
+    let val = ETAPPEN[Nummera][key]
+    let elem = document.querySelector(`#et-${key}`);
+    if (elem) {
+        elem.innerHTML = val;
+        console.log(val);
+    };
+};
 
 
 
-console.log(Nummerau)
-console.log(Land)
-console.log(Berg)
-console.log(Beschreibung)
-console.log(Schwierigkeit)
-console.log(Dauer)
-console.log(Laenge)
-console.log(Aufstieg)
-console.log(Abstieg)
+
+
+// console.log(Nummerau)
+// console.log(Land)
+// console.log(Berg)
+// console.log(Beschreibung)
+// console.log(Schwierigkeit)
+// console.log(Dauer)
+// console.log(Laenge)
+// console.log(Aufstieg)
+// console.log(Abstieg)
+
+// var elem = document.querySelector("#et-Beschreibung").innerHTML;
+
+
+// let elem = document.querySelector("#et-Beschreibung");
+// if (elem) {
+//     elem.innerHTML = Beschreibung;
+//     console.log(Beschreibung);
+// };
+
+// let elem = document.querySelector("#et-Land");
+// if (elem) {
+//     elem.innerHTML = Land;
+//     console.log(Land);
+// };
+
+
+
+
 // let showInfos = function (Nummer {
 
 //     for (const Nummer in ETAPPEN) {
