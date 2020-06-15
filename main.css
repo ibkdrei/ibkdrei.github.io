@@ -58,12 +58,15 @@ header h4:last-child {
     margin-right: 0;
 }
 
+
 #navigation {
     margin: 0;
     padding: 0 1em;
     background: #000;
     height: 3em;
     list-style: none;
+    z-index: 999;
+    overflow: visible;
 }
 
 #navigation>li {
@@ -71,6 +74,8 @@ header h4:last-child {
     height: 100%;
     margin-right: 0.5em;
     padding: 0 1em;
+    z-index: 999;
+    overflow: visible;
 }
 
 #navigation>li>a {
@@ -81,15 +86,21 @@ header h4:last-child {
     line-height: 3;
     font-weight: bold;
     text-transform: uppercase;
+    z-index: 999;
+    overflow: visible;
 }
 
 #navigation>li>a:hover {
     color: lightgreen;
     text-decoration: underline;
+    z-index: 999;
+    overflow: visible;
 }
 
 #navigation>li.sub {
     position: relative;
+    z-index: 999;
+    overflow: visible;
 }
 
 #navigation>li.sub ul {
@@ -100,6 +111,8 @@ header h4:last-child {
     background: grey;
     position: absolute;
     top: -1000em;
+    z-index: 999;
+    overflow: visible;
 }
 
 #navigation>li.sub ul li {
@@ -246,4 +259,6 @@ font-size: 14pt;
 }
 
 
-
+#uebersicht {
+    list-style: none;
+}

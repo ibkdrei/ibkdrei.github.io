@@ -76,6 +76,7 @@ let showInfos = function (Nummer) {
     showInfos(Nummer);
 }
 
+console.log(ETAPPEN[1].Nummer);
 
 var myStyle = {
     "color": "#ff7800",
@@ -943,5 +944,8 @@ let fotospot = L.marker([photo_lat, photo_lng], {
     })
 }).addTo(map);
 fotospot.bindPopup(
-    img
+    img, {
+        maxWidth: "auto"
+    }
 );
+
