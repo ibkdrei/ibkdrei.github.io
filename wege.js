@@ -87,62 +87,6 @@ for (const key in ETAPPEN[Nummera]) {
 };
 
 
-
-
-
-// console.log(Nummerau)
-// console.log(Land)
-// console.log(Berg)
-// console.log(Beschreibung)
-// console.log(Schwierigkeit)
-// console.log(Dauer)
-// console.log(Laenge)
-// console.log(Aufstieg)
-// console.log(Abstieg)
-
-// var elem = document.querySelector("#et-Beschreibung").innerHTML;
-
-
-// let elem = document.querySelector("#et-Beschreibung");
-// if (elem) {
-//     elem.innerHTML = Beschreibung;
-//     console.log(Beschreibung);
-// };
-
-// let elem = document.querySelector("#et-Land");
-// if (elem) {
-//     elem.innerHTML = Land;
-//     console.log(Land);
-// };
-
-
-
-
-// let showInfos = function (Nummer {
-
-//     for (const Nummer in ETAPPEN) {
-//         if (ETAPPEN[etappe].Nummer.hasOwnProperty(key)) {
-//             console.log("schau mal", key);
-//             let val = ETAPPEN[etappe][key];
-//             console.log("schau mal 2:", key, val)
-//             console.log(`et-${key}`);
-//             let elem = document.querySelector(`#et-${key}`);
-//             if (elem) {
-//                 elem.innerHTML = val;
-//             }
-
-//         }
-//         // console.log("elem:", elem)
-
-
-//     };
-    
-// }
-// showInfos(etappe)
-// console.log(key)
-
-// console.log(ETAPPEN[1].Nummer);
-
 var myStyle = {
     "color": "#ff7800",
     "weight": 5,
@@ -160,17 +104,7 @@ map.locate({
     watch: true,
 });
 
-// map.data.loadGeoJson('track_points.js');
 
-// for (const key in ETAPPEN[nr]) {
-//     if (ETAPPEN[nr].hasOwnProperty(key)) {
-//         const val = ETAPPEN[nr][key];
-//         let elem = document.querySelector(`#et-${key}`);
-//         if (elem) {
-//             elem.innerHTML = val;
-//         }
-//     }
-// }
 
 // map.on('load', function () {
 //     map.addSource('route', {
