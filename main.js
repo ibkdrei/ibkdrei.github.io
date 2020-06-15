@@ -23,14 +23,61 @@ for (const start of startpoints) {
             iconUrl: "images/hiking.png"
         })
     }).addTo(overlay.startpoints);
-        startmarker.bindPopup (`
+    startmarker.bindPopup(`
         <h3>${start.name}</h3>
         <p>Schwierigkeit: ${start.schwierigkeit}</p>
         `);
 }
 overlay.startpoints.addTo(map);
 
-let rainviewer = L.control.rainviewer({ 
+let boundaries = L.geoJson(BOUNDARIES).addTo(map)
+map.fitBounds(boundaries.getBounds());
+
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+};
+
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+};
+
+console.log(BOUNDARIES)
+
+function onClick(e) {
+    for (const key1 in BOUNDARIES[properties.admin]) {
+        if (key1 == Austria) {
+            window.open("https://ibkdrei.github.io/wege.html");
+        } else {
+            window.open("https.//ibkdrei.github.zukunft.html");
+        }
+    }
+};
+
+function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        click: onClick
+    });
+};
+
+geojson = L.geoJson(BOUNDARIES, {
+
+    onEachFeature: onEachFeature
+}).addTo(map);
+
+// country.onclick = function () {
+
+// }
+
+let rainviewer = L.control.rainviewer({
     position: 'bottomleft',
     nextButtonText: '>',
     playStopButtonText: 'Play/Stop',

@@ -3,7 +3,7 @@
 body {
 
     margin: auto;
-    font-family: 'Muli', sans-serif; 
+    font-family: 'Muli', sans-serif;
     max-width: 1280px;
     padding-right: 2em;
     text-align: justify;
@@ -13,7 +13,7 @@ header img {
     width: 400px;
     display: block;
     margin: 0 auto;
-    
+
 }
 
 header h3 {
@@ -23,6 +23,31 @@ header h3 {
 
 }
 
+/* header h4 {
+    float: left;
+    width: 31%;
+    margin-right: 2%;
+    padding: 20px;
+    background: #eee;
+    box-sizing: border-box;
+}
+
+header h4:last-child {
+    margin-right: 0;
+} */
+
+.infos {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+    padding: 20px;
+    background: #eee;
+    box-sizing: border-box;
+}
+
+.infos:last-child {
+    margin-right: 0;
+}
 
 #navigation {
     margin: 0;
@@ -31,14 +56,15 @@ header h3 {
     height: 3em;
     list-style: none;
 }
-#navigation > li {
+
+#navigation>li {
     float: left;
     height: 100%;
     margin-right: 0.5em;
     padding: 0 1em;
-   }
-   
-   #navigation > li > a {
+}
+
+#navigation>li>a {
     float: right;
     height: 100%;
     color: whitesmoke;
@@ -46,49 +72,50 @@ header h3 {
     line-height: 3;
     font-weight: bold;
     text-transform: uppercase;
-   }
-   
-   #navigation > li > a:hover {
-    color:lightgreen;
+}
+
+#navigation>li>a:hover {
+    color: lightgreen;
     text-decoration: underline;
-   }
+}
 
-   #navigation > li.sub {
+#navigation>li.sub {
     position: relative;
-   }
+}
 
-   #navigation > li.sub ul {
+#navigation>li.sub ul {
     width: 10em;
     margin: 0;
     padding: 0.5em 0;
     list-style: none;
-    background:grey;
+    background: grey;
     position: absolute;
     top: -1000em;
-   }
-   
-   #navigation > li.sub ul li {
+}
+
+#navigation>li.sub ul li {
     width: 90%;
     margin: 0 auto 0.3em auto;
-   }
-   
-   #navigation > li.sub ul li a {
+}
+
+#navigation>li.sub ul li a {
     height: 100%;
     display: block;
     padding: 0.4em;
     color: #fff;
     font-weight: bold;
     text-decoration: none;
-   }
-   
-   #navigation > li.sub ul li a:hover {
+}
+
+#navigation>li.sub ul li a:hover {
     background: lightgreen;
     text-decoration: underline;
-   }
+}
 
-   #navigation > li.sub:hover ul {
+#navigation>li.sub:hover ul {
     top: 3em;
-   }
+}
+
 #laender {
     display: inline;
     list-style-type: none;
@@ -98,7 +125,7 @@ header h3 {
     padding: 3em;
     margin: 5px;
     width: 20%;
-    
+
     padding-bottom: 3em;
 }
 
@@ -111,8 +138,8 @@ header h3 {
 }
 a:link,
 a:visited {
-        color: black;
-    }
+    color: black;
+}
 
 /* nav ul {
     margin: 0px;
@@ -121,7 +148,7 @@ a:visited {
     border-width: 1px;
     /* border-style: solid;
     border-color: black; */
-    
+
 
 
 /* nav ul li {
@@ -129,7 +156,7 @@ a:visited {
     margin: 5px;
     width: 20%;
     /* display: inline; */
-    /* padding-bottom: 3em; */
+/* padding-bottom: 3em; */
 
 
 /* main nav ul li img {
@@ -144,7 +171,7 @@ a:visited {
     height: auto;
     display: block;
     margin: 0 auto;
-} 
+}
 
 
 
@@ -152,7 +179,7 @@ figcaption {
     padding: .8em;
     text-align: center;
     overflow: auto;
-  }
+}
 
 #symbole {
     padding-left: 3em;
@@ -168,11 +195,11 @@ figcaption {
 
 #müll {
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
     /* margin: 0 auto; */
-} 
+}
 
 
 #mapbox {

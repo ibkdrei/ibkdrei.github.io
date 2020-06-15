@@ -37,7 +37,7 @@ for (const start of startpoints) {
             iconUrl: "images/hiking.png"
         })
     }).addTo(overlay.startpoints);
-        startmarker.bindPopup (`
+    startmarker.bindPopup(`
         <h3>${start.name}</h3>
         <p>Schwierigkeit: ${start.schwierigkeit}</p>
         // <p><a target="links" href="${start.tourhtml}">zur Tour</a></p>
@@ -51,14 +51,27 @@ L.control.scale({
 
 
 
-for (const key in ETAPPEN[Nummer]) {
-    console.log("schau mal", key);
-    let val = ETAPPEN[Nummer][key];
-    console.log("schau mal 2:", key, val)
-    console.log(`et-${key}`);
-    let elem = document.querySelector(`#et-${key}`);
-    console.log("elem:", elem)
-    };
+let showInfos = function (Nummer) {
+    for (const key in ETAPPEN[Nummer]) {
+        if (ETAPPEN[Nummer].hasOwnProperty(key)) {
+            console.log("schau mal", key);
+            let val = ETAPPEN[Nummer][key];
+            console.log("schau mal 2:", key, val)
+            console.log(`et-${key}`);
+            let elem = document.querySelector(`#et-${key}`);
+            if (elem) {
+                elem.innerHTML = val;
+            }
+
+        }
+    // console.log("elem:", elem)
+
+
+};
+showInfos(Nummer);
+}
+
+
 
 // let mapWege = L.map("mapWege", {
 //     center: [47.25, 11.5],
@@ -986,4 +999,4 @@ L.geoJSON(myLines, {
 // //         }
 // //     }
 // // };
-// drawEtappe(1);
+// drawEtappe(1)

@@ -115,8 +115,8 @@ const ETAPPEN = [{
         "Schwierigkeit": "schwer",
         "Dauer": "8",
         "KM": "",
-        "Aufstieg": 1200,
-        "Abstieg": 200
+        "Aufstieg": "1200",
+        "Abstieg": "200"
     },
     {
         "Nummer": "10",
