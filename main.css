@@ -114,6 +114,19 @@ a:visited {
         color: black;
     }
 
+#liste {
+    list-style-type: none;
+}
+
+#warning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 95%;
+}
+
+
 /* nav ul {
     margin: 0px;
     padding: 1em;
