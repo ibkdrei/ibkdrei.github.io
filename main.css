@@ -165,7 +165,8 @@ a:visited {
     text-align: justify;
     /* display: block;
     margin: 0 auto; */
-    width: 90%;
+    width: 100%;
+  
     border-color: red;
     border-width: 1pt;
     border-style: dashed;
@@ -194,7 +195,9 @@ a:visited {
     margin: 0 auto;
 }
 
-
+#text {
+    padding-left: 2em;
+}
 
 figcaption {
     padding: .8em;
@@ -232,7 +235,6 @@ figcaption {
 
 body h5 {
 font-size: 14pt;
-text-align: ;
 }
 
 
