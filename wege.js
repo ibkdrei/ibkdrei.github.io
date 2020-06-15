@@ -91,6 +91,13 @@ L.geoJSON(myLines, {
     style: myStyle
 }).addTo(map);
 
+//Plugin setzt Karte auf aktuelle GeoPosition, falls Ortung aktiviert
+map.locate({
+    setView: true,
+    maxZoom: 8,
+    watch: true,
+});
+
 // map.data.loadGeoJson('track_points.js');
 
 // for (const key in ETAPPEN[nr]) {
