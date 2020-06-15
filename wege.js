@@ -57,32 +57,29 @@ L.control.scale({
     imperial: false
 }).addTo(map);
 
-let showInfos = function (etappe) {
-    for (const key in ETAPPEN[etappe]) {
-        if (ETAPPEN[etappe].hasOwnProperty(key)) {
-            console.log("schau mal", key);
-            let val = ETAPPEN[etappe][key];
-            console.log("schau mal 2:", key, val)
-            console.log(`et-${key}`);
-            let elem = document.querySelector(`#et-${key}`);
-            if (elem) {
-                elem.innerHTML = val;
-            }
+// let showInfos = function (etappe) {
+//     for (const key in ETAPPEN[etappe]) {
+//         if (ETAPPEN[etappe].hasOwnProperty(key)) {
+//             console.log("schau mal", key);
+//             let val = ETAPPEN[etappe][key];
+//             console.log("schau mal 2:", key, val)
+//             console.log(`et-${key}`);
+//             let elem = document.querySelector(`#et-${key}`);
+//             if (elem) {
+//                 elem.innerHTML = val;
+//             }
 
-        }
-        // console.log("elem:", elem)
+//         }
+//         // console.log("elem:", elem)
 
 
-    };
+//     };
     
-}
-<<<<<<< HEAD
-showInfos(etappe)
-console.log(key)
-=======
+// }
+// showInfos(etappe)
+// console.log(key)
 
-console.log(ETAPPEN[1].Nummer);
->>>>>>> e3f76c3e9cb8878594bda068bd383ff71212abf9
+// console.log(ETAPPEN[1].Nummer);
 
 var myStyle = {
     "color": "#ff7800",
