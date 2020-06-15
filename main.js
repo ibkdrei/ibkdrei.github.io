@@ -1,6 +1,6 @@
 let startLayer = L.tileLayer.provider("Stamen.TerrainBackground");
 
-let map = L.map("map", {
+let mainmap = L.map("mainmap", {
     center: [46.3, 11.504914],
     zoom: 6.5,
     layers: [
@@ -30,8 +30,8 @@ let map = L.map("map", {
 // }
 // overlay.startpoints.addTo(map);
 
-let boundaries = L.geoJson(BOUNDARIES).addTo(map)
-map.fitBounds(boundaries.getBounds());
+let boundaries = L.geoJson(BOUNDARIES).addTo(mainmap)
+mainmap.fitBounds(boundaries.getBounds());
 
 function highlightFeature(e) {
     var layer = e.target;
@@ -71,7 +71,7 @@ function onEachFeature(feature, layer) {
 geojson = L.geoJson(BOUNDARIES, {
 
     onEachFeature: onEachFeature
-}).addTo(map);
+}).addTo(mainmap);
 
 // country.onclick = function () {
 
@@ -87,4 +87,4 @@ let rainviewer = L.control.rainviewer({
     animationInterval: 500,
     opacity: 0.5
 });
-rainviewer.addTo(map);
+rainviewer.addTo(mainmap);
