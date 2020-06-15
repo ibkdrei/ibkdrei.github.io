@@ -246,4 +246,6 @@ font-size: 14pt;
 }
 
 
-
+#uebersicht {
+    list-style: none;
+}
