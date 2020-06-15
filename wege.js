@@ -46,9 +46,8 @@ for (const start of startpoints) {
         })
     }).addTo(overlay.startpoints);
     startmarker.bindPopup(`
-        <h3>${start.name}</h3>
+        <h2><a target="links" href="${start.tourhtml}">${start.name}</a></h2>
         <p>Schwierigkeit: ${start.schwierigkeit}</p>
-        <p><a target="links" href="${start.tourhtml}">zur Tour</a></p>
         `);
 }
 overlay.startpoints.addTo(map);
