@@ -17,6 +17,7 @@ const photo_lat = div.getAttribute("photo_lat");
 const photo_lng = div.getAttribute("photo_lng");
 const spot = div.getAttribute("fotospot src");
 const img = document.getElementById("myfoto");
+const naehe = div.getAttribute("zoom");
 
 
 
@@ -26,7 +27,7 @@ let startLayer = L.tileLayer.provider("HikeBike.HikeBike")
 
 let map = L.map("map", {
     center: [breite, laenge],
-    zoom: 14,
+    zoom: naehe,
     layers: [
         startLayer
     ]
