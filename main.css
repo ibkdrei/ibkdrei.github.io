@@ -37,8 +37,9 @@ header h4:last-child {
 } */
 
 .infos {
-    float: left;
-    width: 32%;
+    text-align: center;
+    float: right;
+    width: 31%;
     margin-right: 2%;
     padding: 20px;
     background: #eee;
@@ -130,9 +131,9 @@ header h4:last-child {
 }
 
 #map {
-
-    width: calc(100% -2px);
-    height: 70vh;
+margin-top: 25em;
+    width: 100%;
+    height: 100vh;
     border: 1px solid gray;
     padding-top: 3em;
 }
@@ -221,3 +222,13 @@ figcaption {
     border: 1px solid gray;
     padding-top: 3em;
 }
+
+.rainviewer{
+    font-weight: bold;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
