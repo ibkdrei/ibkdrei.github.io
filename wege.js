@@ -18,6 +18,7 @@ const photo_lng = div.getAttribute("photo_lng");
 const spot = div.getAttribute("fotospot src");
 const img = document.getElementById("myfoto");
 const naehe = div.getAttribute("zoom");
+const etappe = div.getAttribute("etappennummer");
 
 
 let startLayer = L.tileLayer.provider("Esri.WorldTopoMap")
@@ -56,11 +57,11 @@ L.control.scale({
     imperial: false
 }).addTo(map);
 
-let showInfos = function (Nummer) {
-    for (const key in ETAPPEN[Nummer]) {
-        if (ETAPPEN[Nummer].hasOwnProperty(key)) {
+let showInfos = function (etappe) {
+    for (const key in ETAPPEN[etappe]) {
+        if (ETAPPEN[etappe].hasOwnProperty(key)) {
             console.log("schau mal", key);
-            let val = ETAPPEN[Nummer][key];
+            let val = ETAPPEN[etappe][key];
             console.log("schau mal 2:", key, val)
             console.log(`et-${key}`);
             let elem = document.querySelector(`#et-${key}`);
@@ -73,9 +74,10 @@ let showInfos = function (Nummer) {
 
 
     };
-    showInfos(Nummer);
+    
 }
-
+showInfos(etappe)
+console.log(key)
 
 var myStyle = {
     "color": "#ff7800",
