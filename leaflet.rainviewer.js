@@ -10,7 +10,7 @@ L.Control.Rainviewer = L.Control.extend({
         opacity: 0.5
     },
 
-    onAdd: function (map) {
+    onAdd: function (mainmap) {
         /**
          * RainViewer radar animation part
          * @type {number[]}
@@ -26,7 +26,7 @@ L.Control.Rainviewer = L.Control.extend({
 
         this.rainviewerActive = false;
 
-        this._map = map;
+        this._mainmap = mainmap;
 
         this.container = L.DomUtil.create('div', 'leaflet-control-rainviewer leaflet-bar leaflet-control');
 
@@ -35,12 +35,12 @@ L.Control.Rainviewer = L.Control.extend({
         L.DomEvent.on(this.link, 'click', this.load, this);
         return this.container;
 
-        /*return this.load(map);*/
+        /*return this.load(mainmap);*/
 
 
     },
 
-    load: function(map) {
+    load: function(mainmap) {
                 /**
          * Load actual radar animation frames this.timestamps from RainViewer API
          */
@@ -128,10 +128,10 @@ L.Control.Rainviewer = L.Control.extend({
         L.DomUtil.removeClass(this.container, 'leaflet-control-rainviewer-active');
         console.log(this.radarLayers);
         var radarLayers = this.radarLayers;
-        var map = this._map;
+        var mainmap = this._mainmap;
         Object.keys(radarLayers).forEach(function (key) {
-            if (map.hasLayer(radarLayers[key])) {
-                map.removeLayer(radarLayers[key]);
+            if (mainmap.hasLayer(radarLayers[key])) {
+                mainmap.removeLayer(radarLayers[key]);
             }
          });
     },
@@ -146,8 +146,8 @@ L.Control.Rainviewer = L.Control.extend({
                 zIndex: ts
             });
         }
-        if (!map.hasLayer(this.radarLayers[ts])) {
-            map.addLayer(this.radarLayers[ts]);
+        if (!mainmap.hasLayer(this.radarLayers[ts])) {
+            mainmap.addLayer(this.radarLayers[ts]);
         }
     },
 
@@ -258,7 +258,7 @@ L.Control.Rainviewer = L.Control.extend({
         return
     },
 
-    onRemove: function (map) {
+    onRemove: function (mainmap) {
         // Nothing to do here
     }
 });
