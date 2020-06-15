@@ -76,8 +76,13 @@ let showInfos = function (etappe) {
     };
     
 }
+<<<<<<< HEAD
 showInfos(etappe)
 console.log(key)
+=======
+
+console.log(ETAPPEN[1].Nummer);
+>>>>>>> e3f76c3e9cb8878594bda068bd383ff71212abf9
 
 var myStyle = {
     "color": "#ff7800",
