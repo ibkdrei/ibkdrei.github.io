@@ -1,14 +1,14 @@
-const ETAPPEN = [{
-        "Nummer": "Tournummer",
-        "Land": "Wanderregion",
-        "Berg": "Attraktion",
-        "Beschreibung": "Tourbeschreibung",
-        "Tourname": "Tourname",
-        "Schwierigkeit": "Schwierigkeitsgrad",
-        "Dauer": "Dauer",
-        "KM": "Länge",
-        "Aufstieg": "Aufstieg",
-        "Abstieg": "Abstieg"},
+const ETAPPEN = [
+        // "Nummer": "Tournummer",
+        // "Land": "Wanderregion",
+        // "Berg": "Attraktion",
+        // "Beschreibung": "Tourbeschreibung",
+        // "Tourname": "Tourname",
+        // "Schwierigkeit": "Schwierigkeitsgrad",
+        // "Dauer": "Dauer",
+        // "KM": "Länge",
+        // "Aufstieg": "Aufstieg",
+        // "Abstieg": "Abstieg"},
 
     // }, {
     //     "Nummer": "1",
@@ -70,18 +70,18 @@ const ETAPPEN = [{
     //     "Aufstieg": 970,
     //     "Abstieg": 970
     // },
-    {
-        "Nummer":"6",
-        "Land": "Österreich",
-        "Berg": "Seebensee",
-        "Beschreibung": "Um das Panorama eines bekannten Berges zu genießen, muss man sich bekanntermaßen in den umliegenden Bergen aufhalten. So auch bei dieser Wanderung mit Zugspitzpanorama.  ",
-        "Tourname": "",
-        "Schwierigkeit": "mittel/schwer",
-        "Dauer": "5",
-        "KM": "13",
-        "Aufstieg": 880,
-        "Abstieg": 880
-    },
+{
+    "Nummer":"6",
+    "Land": "Österreich",
+    "Berg": "Seebensee",
+    "Beschreibung": "Um das Panorama eines bekannten Berges zu genießen, muss man sich bekanntermaßen in den umliegenden Bergen aufhalten. So auch bei dieser Wanderung mit Zugspitzpanorama.  ",
+    "Tourname": "",
+    "Schwierigkeit": "mittel/schwer",
+    "Dauer": "5",
+    "KM": "13",
+    "Aufstieg": 880,
+    "Abstieg": 880
+},
     {
         "Nummer": "7",
         "Land": "Österreich",
