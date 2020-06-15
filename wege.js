@@ -18,8 +18,7 @@ const photo_lng = div.getAttribute("photo_lng");
 const spot = div.getAttribute("fotospot src");
 const img = document.getElementById("myfoto");
 const naehe = div.getAttribute("zoom");
-const etappe = div.getAttribute("etappennummer");
-
+const etappe = div.getAttribute("Nummer")
 
 let startLayer = L.tileLayer.provider("Esri.WorldTopoMap")
 // let startLayer = L.tileLayer.provider("Jawg.Terrain")
@@ -56,10 +55,39 @@ overlay.startpoints.addTo(map);
 L.control.scale({
     imperial: false
 }).addTo(map);
+// console.log(ETAPPEN[3])
+// console.log(etappe)
 
-// let showInfos = function (etappe) {
-//     for (const key in ETAPPEN[etappe]) {
-//         if (ETAPPEN[etappe].hasOwnProperty(key)) {
+let xyc = document.querySelector("#NUM");
+let Nummera = xyc.dataset.xyz
+console.log(ETAPPEN[Nummera].Berg)
+
+
+Nummerau = ETAPPEN[Nummera].Nummer
+Land =ETAPPEN[Nummera].Land
+Berg = ETAPPEN[Nummera].Berg
+Beschreibung = ETAPPEN[Nummera].Beschreibung
+Schwierigkeit =  ETAPPEN[Nummera].Schwierigkeit
+Dauer = ETAPPEN[Nummera].Dauer
+Laenge = ETAPPEN[Nummera].KM
+Aufstieg= ETAPPEN[Nummera].Aufstieg
+Abstieg = ETAPPEN[Nummera].Abstieg
+
+
+
+console.log(Nummerau)
+console.log(Land)
+console.log(Berg)
+console.log(Beschreibung)
+console.log(Schwierigkeit)
+console.log(Dauer)
+console.log(Laenge)
+console.log(Aufstieg)
+console.log(Abstieg)
+// let showInfos = function (Nummer {
+
+//     for (const Nummer in ETAPPEN) {
+//         if (ETAPPEN[etappe].Nummer.hasOwnProperty(key)) {
 //             console.log("schau mal", key);
 //             let val = ETAPPEN[etappe][key];
 //             console.log("schau mal 2:", key, val)
