@@ -16,12 +16,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.0/gpx.js"></script>
     <script src="GeoJson_AT/tour10hallstatt.js"></script>
 
+    
+
 
     <link rel="stylesheet" href="main.css">
     <script src="weginfos.js"></script>
     <script defer src="wege.js"></script>
     <script src="startpoints_GPX_OE.js"></script>
-
 
 
 </head>
@@ -66,8 +67,19 @@
 
         <p> Bei einer Wanderung in alpinem Gelände sind viele Dinge zu beachten. <a href="infos.html"> <b>Hier</b></a>
             findest du mehr Informationen zu unseren Karten und zur allgemeinen Sicherheit in alpinen Gelände. </p>
-        <div id="map"  center-lat= "47.556994" center-lng="13.647466" ></div>
+
+<!-- 
+       <script type="text/javascript">
+       var total = 1
+     </script>
+        <img src="fotospots/Hallstatt"+total+".jpg" id=imagebox /> -->
+
+        <div id="map"  center-lat= "47.556994" center-lng="13.647466" photo_lat="47.5613141" photo_lng="13.6436083">
+            <img src="fotospots/Hallstatt.jpg" id="myfoto" width="100px"/>
+        </div>
       
+        
+       -->
         <h3>Etappeninformationen</h3>
         <ul id="uebersicht">
         <li>Startpunkt: <span id=et-start></span></li>
