@@ -10,6 +10,8 @@
 
 // const hallstatt = document.getElementById("imagebox").src="fotospots/Hallstatt"+total+".jpg"
 
+
+// Festlegen der Variablen für die einzelnen Wege
 const div = document.getElementById("map");
 const breite = div.getAttribute("center-lat");
 const laenge = div.getAttribute("center-lng");
@@ -20,6 +22,8 @@ const img = document.getElementById("myfoto");
 const naehe = div.getAttribute("zoom");
 const etappe = div.getAttribute("Nummer")
 
+
+// Aufsetzen der Karte
 let startLayer = L.tileLayer.provider("Esri.WorldTopoMap")
 // let startLayer = L.tileLayer.provider("Jawg.Terrain")
 
@@ -30,7 +34,6 @@ let map = L.map("map", {
         startLayer
     ]
 });
-
 
 let overlay = {
     startpoints: L.featureGroup()
@@ -52,12 +55,17 @@ for (const start of startpoints) {
 }
 overlay.startpoints.addTo(map);
 
+// Maßstabsleiste
 L.control.scale({
     imperial: false
 }).addTo(map);
+
+// Was kann wie angesprochen werden?
 // console.log(ETAPPEN[3])
 // console.log(etappe)
 
+
+// Abfrage mit querySelector
 let xyc = document.querySelector("#NUM");
 let Nummera = xyc.dataset.xyz
 console.log(ETAPPEN[Nummera].Berg)
@@ -73,10 +81,11 @@ console.log(ETAPPEN[Nummera].Berg)
 // Aufstieg= ETAPPEN[Nummera].Aufstieg
 // Abstieg = ETAPPEN[Nummera].Abstieg
 
-    
 
+// Zuordnung der Tour zu Tourdaten 
 let val = ETAPPEN[Nummera].key;
 
+// Abruf des keys mit zugehörigem Wert und Platzierung an der richtigen Stelle
 for (const key in ETAPPEN[Nummera]) {
     let val = ETAPPEN[Nummera][key]
     let elem = document.querySelector(`#et-${key}`);
@@ -86,7 +95,7 @@ for (const key in ETAPPEN[Nummera]) {
     };
 };
 
-
+//Style der Map
 var myStyle = {
     "color": "#ff7800",
     "weight": 5,
@@ -927,13 +936,7 @@ map.locate({
 // });
 
 
-
-
-
-
-
-
-
+// Foto im Icon platzieren
 let fotospot = L.marker([photo_lat, photo_lng], {
     icon: L.icon({
         iconSize: [32, 37],
