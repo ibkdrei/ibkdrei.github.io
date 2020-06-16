@@ -114,7 +114,7 @@ const ETAPPEN = [
         "Tourname": "Johann Klettersteig ",
         "Schwierigkeit": "schwer",
         "Dauer": "8",
-        "KM": "",
+        "KM": "n.a.",
         "Aufstieg": "1200",
         "Abstieg": "200"
     },
