@@ -1,3 +1,5 @@
+// Aufsetzen der mainmap auf der Startseite mithilfe leaflet-providers
+
 let startLayer = L.tileLayer.provider("Stamen.TerrainBackground");
 
 let mainmap = L.map("mainmap", {
@@ -8,20 +10,21 @@ let mainmap = L.map("mainmap", {
     ]
 });
 
+// Festlegen des Styles der mainmap
 var mainmapStyle = {
     color: 'white',
     fillOpacity: '0%',
     fillColor: 'white'
     
 }
+
+// Layer mit Ländergrenzen zur Karte hinzufügen
 let boundaries = L.geoJson(BOUNDARIES,{
     style: mainmapStyle
 }).addTo(mainmap)
 mainmap.fitBounds(boundaries.getBounds());
 
-
-
-
+// Funktionen für den klickbaren Layer
 function highlightFeature(e) {
     var layer = e.target;
 
