@@ -25,6 +25,8 @@ let boundaries = L.geoJson(BOUNDARIES,{
 mainmap.fitBounds(boundaries.getBounds());
 
 // Funktionen für den klickbaren Layer
+
+// aufleuchten bei Cursorberührung
 function highlightFeature(e) {
     var layer = e.target;
 
@@ -36,15 +38,17 @@ function highlightFeature(e) {
     });
 };
 
+// Beenden des Aufleuchtens
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
 };
 
-
+//Öffnen des wege.html bei Mausklick
 function onClick(e) {
     window.open("https://ibkdrei.github.io/wege.html");
 }
 
+//Anwendung der Funktionen für alle Features und Hinzufügen zur Karte
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
@@ -59,9 +63,10 @@ geojson = L.geoJson(BOUNDARIES, {
 }).addTo(mainmap);
 
 
+// Rainviewer Plugin
 
 let rainviewer = L.control.rainviewer({
-    position: 'bottomleft',
+    position: 'topright',
     nextButtonText: '>',
     playStopButtonText: 'Play/Stop',
     prevButtonText: '<',
