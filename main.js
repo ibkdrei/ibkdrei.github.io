@@ -33,6 +33,10 @@ let mainmap = L.map("mainmap", {
 let boundaries = L.geoJson(BOUNDARIES).addTo(mainmap)
 mainmap.fitBounds(boundaries.getBounds());
 
+let adm = BOUNDARIES
+
+
+
 function highlightFeature(e) {
     var layer = e.target;
 
@@ -48,7 +52,6 @@ function resetHighlight(e) {
     geojson.resetStyle(e.target);
 };
 
-console.log(BOUNDARIES)
 
 // function onClick(e) {
 //     for (const key1 in BOUNDARIES[properties.admin]) {
@@ -59,6 +62,14 @@ console.log(BOUNDARIES)
 //         }
 //     }
 // };
+
+
+
+// for (key1 in adm) {
+//     console.log(BOUNDARIES[adm].admin)
+// };
+
+
 
 function onClick(e) {
     window.open("https://ibkdrei.github.io/wege.html");
@@ -80,6 +91,7 @@ geojson = L.geoJson(BOUNDARIES, {
 // country.onclick = function () {
 
 // }
+
 
 let rainviewer = L.control.rainviewer({
     position: 'bottomleft',

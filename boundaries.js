@@ -1,4 +1,5 @@
 const BOUNDARIES = [{
+    "country": "Austria",
     "type": "Feature",
     "geometry": {
         "type": "MultiPolygon",
