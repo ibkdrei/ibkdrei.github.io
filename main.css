@@ -1,4 +1,4 @@
-/* index.html */
+/* alle html */
 
 header {
     font-family: 'Muli', sans-serif;
@@ -12,9 +12,10 @@ body {
 
     margin: auto;
     font-family: 'Muli', sans-serif;
-    max-width: 1280px;
+    max-width: 90%;
     padding-right: 2em;
     text-align: justify;
+    width: 90%;
 }
 
 header img {
@@ -31,33 +32,7 @@ header h3 {
 
 }
 
-/* header h4 {
-    float: left;
-    width: 31%;
-    margin-right: 2%;
-    padding: 20px;
-    background: #eee;
-    box-sizing: border-box;
-}
-
-header h4:last-child {
-    margin-right: 0;
-} */
-
-.infos {
-    text-align: center;
-    float: right;
-    width: 31%;
-    margin-right: 2%;
-    padding: 20px;
-    background: #eee;
-    box-sizing: border-box;
-}
-
-.infos:last-child {
-    margin-right: 0;
-}
-
+/* Menüleiste mit Dropdownmenü */
 
 #navigation {
     margin: 0;
@@ -74,8 +49,6 @@ header h4:last-child {
     height: 100%;
     margin-right: 0.5em;
     padding: 0 1em;
-    z-index: 999;
-    overflow: visible;
 }
 
 #navigation>li>a {
@@ -86,21 +59,15 @@ header h4:last-child {
     line-height: 3;
     font-weight: bold;
     text-transform: uppercase;
-    z-index: 999;
-    overflow: visible;
 }
 
 #navigation>li>a:hover {
     color: lightgreen;
     text-decoration: underline;
-    z-index: 999;
-    overflow: visible;
 }
 
 #navigation>li.sub {
     position: relative;
-    z-index: 999;
-    overflow: visible;
 }
 
 #navigation>li.sub ul {
@@ -127,6 +94,7 @@ header h4:last-child {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
+    text-align: center;
 }
 
 #navigation>li.sub ul li a:hover {
@@ -138,71 +106,49 @@ header h4:last-child {
     top: 3em;
 }
 
-#laender {
-    display: inline;
-    list-style-type: none;
+a:link,
+a:visited {
+    color: black;
+}
+
+/* index.html */
+
+/* Anordung des Textes in 3 horizontalen Boxen */
+
+.infos {
     text-align: center;
-    display: inline;
-    padding-bottom: 2em;
-    padding: 3em;
-    margin: 5px;
-    width: 20%;
-
-    padding-bottom: 3em;
+    float: right;
+    width: 31%;
+    margin-right: 2%;
+    padding: 20px;
+    background: #eee;
+    box-sizing: border-box;
 }
 
-#map {
-    width: calc(100% -2px);
-    height: 70vh;
-    border: 1px solid gray;
+.infos:last-child {
+    margin-right: 0;
 }
+
 
 #mainmap{
-    margin-top: 25em;
+    margin-top: 28em;
     width: 100%;
     height: 100vh;
     border: 1px solid gray;
     padding-top: 3em;
 }
 
-a:link,
-a:visited {
-    color: black;
-}
 
 #liste {
     list-style-type: none;
 }
 
-.warning {
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto; */
-    margin: auto;
-    font-family: 'Muli', sans-serif;
-    max-width: 1280px;
-    /* padding-right: 2em; */
-    text-align: justify;
-    /* display: block;
-    margin: 0 auto; */
-    width: 100%;
-  
-    border-color: red;
-    border-width: 1pt;
-    border-style: dashed;
-    background: rgba(255, 0, 0, 0.3);
-    padding: 25px;
+.rainviewer{
+    font-weight: bold;
+    display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-
-/* nav ul {
-    margin: 0px;
-    padding: 1em;
-    list-style-type: none;
-    border-width: 1px;
-    /* border-style: solid;
-    border-color: black; */
 
 
 
@@ -210,10 +156,25 @@ a:visited {
 
 #aachensee {
 
-    width: 1280px;
+    width: 1135px;
     height: auto;
     display: block;
     margin: 0 auto;
+    align-content: center;
+    box-sizing: ;
+}
+
+.warning {
+
+    margin: 0 auto;
+    font-family: 'Muli', sans-serif;
+    text-align: center;
+    border-color: red;
+    border-width: 1pt;
+    border-style: dashed;
+    background: rgba(255, 0, 0, 0.3);
+    padding: 25px;
+    width: 1135px;
 }
 
 #text {
@@ -247,18 +208,10 @@ figcaption {
 }
 
 
-.rainviewer{
-    font-weight: bold;
-    display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* wege.html */
 
-body h5 {
-font-size: 14pt;
-}
-
-
-#uebersicht {
-    list-style: none;
+#map {
+    width: calc(100% -2px);
+    height: 70vh;
+    border: 1px solid gray;
 }
