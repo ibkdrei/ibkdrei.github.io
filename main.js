@@ -1,3 +1,5 @@
+// Aufsetzen der mainmap auf der Startseite mithilfe leaflet-providers
+
 let startLayer = L.tileLayer.provider("Stamen.TerrainBackground");
 
 let mainmap = L.map("mainmap", {
@@ -8,62 +10,45 @@ let mainmap = L.map("mainmap", {
     ]
 });
 
+// Festlegen des Styles der mainmap
+var mainmapStyle = {
+    color: 'white',
+    fillOpacity: '0%',
+    fillColor: 'white'
 
+}
 
-// let overlay = {
-//     startpoints: L.featureGroup()
-// };
-
-// for (const start of startpoints) {
-//     let startmarker = L.marker([start.lat, start.lng], {
-//         icon: L.icon({
-//             iconSize: [32, 37],
-//             iconAnchor: [16, 37],
-//             popupAnchor: [0, -37],
-//             iconUrl: "images/hiking.png"
-//         })
-//     }).addTo(overlay.startpoints);
-//     startmarker.bindPopup(`
-//         <h3>${start.name}</h3>
-//         <p>Schwierigkeit: ${start.schwierigkeit}</p>
-//         `);
-// }
-// overlay.startpoints.addTo(map);
-
-let boundaries = L.geoJson(BOUNDARIES).addTo(mainmap)
+// Layer mit Ländergrenzen zur Karte hinzufügen
+let boundaries = L.geoJson(BOUNDARIES, {
+    style: mainmapStyle
+}).addTo(mainmap)
 mainmap.fitBounds(boundaries.getBounds());
 
+// Funktionen für den klickbaren Layer
+
+// aufleuchten bei Cursorberührung
 function highlightFeature(e) {
     var layer = e.target;
 
     layer.setStyle({
         weight: 5,
-        color: '#666',
+        color: '#90ee90',
         dashArray: '',
         fillOpacity: 0.7
     });
 };
 
+// Beenden des Aufleuchtens
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
 };
 
-console.log(BOUNDARIES)
-
-// function onClick(e) {
-//     for (const key1 in BOUNDARIES[properties.admin]) {
-//         if (key1 == Austria) {
-//             window.open("https://ibkdrei.github.io/wege.html");
-//         } else {
-//             window.open("https.//ibkdrei.github.zukunft.html");
-//         }
-//     }
-// };
-
+//Öffnen des wege.html bei Mausklick
 function onClick(e) {
     window.open("https://ibkdrei.github.io/wege.html");
 }
 
+//Anwendung der Funktionen für alle Features und Hinzufügen zur Karte
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
@@ -77,12 +62,11 @@ geojson = L.geoJson(BOUNDARIES, {
     onEachFeature: onEachFeature
 }).addTo(mainmap);
 
-// country.onclick = function () {
 
-// }
+// Rainviewer Plugin
 
 let rainviewer = L.control.rainviewer({
-    position: 'bottomleft',
+    position: 'topright',
     nextButtonText: '>',
     playStopButtonText: 'Play/Stop',
     prevButtonText: '<',
