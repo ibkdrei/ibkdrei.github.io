@@ -4,7 +4,7 @@ const startpoints = [{
         "lat": 47.429732,
         "lng": 11.718545,
         "schwierigkeit": "schwer",
-        "tourhtml":"http://ibkdrei.github.io/Achensee.html"
+        "tourhtml": "http://ibkdrei.github.io/Achensee.html"
     },
     {
         "id": 2,
@@ -12,7 +12,7 @@ const startpoints = [{
         "lat": 47.450492,
         "lng": 13.61795,
         "schwierigkeit": "schwer",
-        "tourhtml":"http://ibkdrei.github.io/Dachstein.html"
+        "tourhtml": "http://ibkdrei.github.io/Dachstein.html"
     },
     {
         "id": 3,
@@ -20,7 +20,7 @@ const startpoints = [{
         "lat": 47.556994,
         "lng": 13.647466,
         "schwierigkeit": "mittel",
-        "tourhtml":"http://ibkdrei.github.io/Hallstatt.html"
+        "tourhtml": "http://ibkdrei.github.io/Hallstatt.html"
     },
     {
         "id": 4,
@@ -28,7 +28,7 @@ const startpoints = [{
         "lat": 47.26756,
         "lng": 11.39076,
         "schwierigkeit": "leicht",
-        "tourhtml":"http://ibkdrei.github.io/InnsbruckCitytour.html"
+        "tourhtml": "http://ibkdrei.github.io/InnsbruckCitytour.html"
     },
     {
         "id": 5,
@@ -36,7 +36,7 @@ const startpoints = [{
         "lat": 47.311928,
         "lng": 11.383676,
         "schwierigkeit": "mittel",
-        "tourhtml":"http://ibkdrei.github.io/InnsbruckKarwendel.html"
+        "tourhtml": "http://ibkdrei.github.io/InnsbruckKarwendel.html"
     },
     {
         "id": 6,
@@ -44,7 +44,7 @@ const startpoints = [{
         "lat": 47.387982,
         "lng": 10.937963,
         "schwierigkeit": "schwer",
-        "tourhtml":"http://ibkdrei.github.io/Seebensee.html"
+        "tourhtml": "http://ibkdrei.github.io/Seebensee.html"
     },
     {
         "id": 7,
@@ -52,7 +52,7 @@ const startpoints = [{
         "lat": 47.334159,
         "lng": 12.846814,
         "schwierigkeit": "schwer",
-        "tourhtml":"http://ibkdrei.github.io/ZellamSee.html"
+        "tourhtml": "http://ibkdrei.github.io/ZellamSee.html"
     },
     {
         "id": 8,
@@ -60,6 +60,6 @@ const startpoints = [{
         "lat": 47.038532,
         "lng": 11.701643,
         "schwierigkeit": "mittel",
-        "tourhtml":"http://ibkdrei.github.io/Olpererhuette.html"
+        "tourhtml": "http://ibkdrei.github.io/Olpererhuette.html"
     }
 ]

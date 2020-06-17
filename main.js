@@ -15,11 +15,11 @@ var mainmapStyle = {
     color: 'white',
     fillOpacity: '0%',
     fillColor: 'white'
-    
+
 }
 
 // Layer mit Ländergrenzen zur Karte hinzufügen
-let boundaries = L.geoJson(BOUNDARIES,{
+let boundaries = L.geoJson(BOUNDARIES, {
     style: mainmapStyle
 }).addTo(mainmap)
 mainmap.fitBounds(boundaries.getBounds());
