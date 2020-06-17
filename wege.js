@@ -119,7 +119,7 @@ L.geoJSON(myLines, {
     style: myStyle
 }).addTo(map);
 
-//Plugin setzt Karte auf aktuelle GeoPosition, falls Ortung aktiviert
+//Plugin GPS
 map.locate({
     setView: true,
     maxZoom: 8,
