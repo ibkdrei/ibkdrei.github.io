@@ -24,6 +24,7 @@ const etappe = div.getAttribute("Nummer")
 let startLayer = L.tileLayer.provider("Esri.WorldTopoMap")
 // let startLayer = L.tileLayer.provider("Jawg.Terrain")
 
+// Wichtige Settings der Karte festlegen
 let map = L.map("map", {
     center: [breite, laenge],
     zoom: naehe,
@@ -36,6 +37,7 @@ let overlay = {
     startpoints: L.featureGroup()
 };
 
+// Einfügen des Startpunkts und Markierung durch den Wanderer
 for (const start of startpoints) {
     let startmarker = L.marker([start.lat, start.lng], {
         icon: L.icon({
@@ -95,6 +97,7 @@ var myStyle = {
     "opacity": 0.65
 };
 
+// Abrufen der Koordinaten aus der jeweiligen JS-Datei im geojson-Format
 L.geoJSON(myLines, {
     style: myStyle
 }).addTo(map);
